@@ -1,7 +1,0 @@
-.settings
-/build
-.classpath
-.project
-/bin/
-.settings/*
-!.settings/.jsdtscope
