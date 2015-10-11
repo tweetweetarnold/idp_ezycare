@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="./vendor/wow/animate.css" />
 <link rel="stylesheet" href="./css/nativedroid2.css" />
 
+<link rel="import" href="footer.html" />
+
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -27,13 +29,14 @@
 			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Resident Profile</h1>
 		</div>
 
+		<!-- profile -->
 		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 			<div class='nd2-sidepanel-profile wow fadeInDown'>
-				<img class='profile-background' src="//lorempixel.com/400/200/abstract/2/" />
+				<img class='profile-background' src="http://adamfirthphotography.com/wp-content/uploads/2014/04/Maroubra-Beach-Blog-400x200.jpg" />
 				<div class="row">
 					<div class='col-xs-4 center-xs'>
 						<div class='box'>
-							<img class="profile-thumbnail" src="//lorempixel.com/200/200/people/9/" />
+							<img class="profile-thumbnail" src="http://rs857.pbsrc.com/albums/ab132/ILuvAM/Jack%20Sparrow/jacksparrow.jpg~c200" />
 						</div>
 					</div>
 					<div class='col-xs-8'>
@@ -44,12 +47,24 @@
 					</div>
 				</div>
 			</div>
+			<!-- end profile -->
+
+			<!-- resident tabs -->
+			<a href="resident-summary.html" class="ui-btn ui-mini ui-btn-inline">Summary</a>
+			<a href="resident-contact.html" class="ui-btn ui-mini ui-btn-inline">Contact</a>
+			<a href="resident-appointment.html" class="ui-btn ui-mini ui-btn-inline">Appt</a>
+			<br>
+			<br>
+			<!-- end resident tabs -->
 
 			<!-- post something -->
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="box">
-					<input type="text" name="name2" id="name2b" value="" data-clear-btn="true" placeholder="Post something about resident here...">
-					<a href="#" class="ui-btn ui-mini ui-btn-inline ui-btn-icon-block"><i class='zmdi zmdi-edit zmd-2x'></i>edit article</a>
+					<input type="text" name="name2" id="name2b" value="" data-clear-btn="true" placeholder="Post something about the resident here...">
+					<a href="#" class="ui-btn ui-mini ui-btn-inline ui-btn-icon-block">
+						<i class='zmdi zmdi-edit zmd-2x'></i>
+						POST
+					</a>
 				</div>
 			</div>
 
@@ -67,7 +82,7 @@
 				</li>
 				<li>
 					<a href="#">
-						<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
+						<img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h3>11 Oct, Sun, 1500hrs</h3>
 						<p>Jack choked on fishballs during lunch</p>
 					</a>
@@ -86,7 +101,10 @@
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='residents.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
+					<a href='residents.html'
+						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'
+					>
 						<i class='zmdi zmdi-accounts zmd-2x'></i>
 						<strong>Residents</strong>
 					</a>
@@ -102,7 +120,7 @@
 				<div class='col-xs-auto'>
 					<a href='sos.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
 						<i class='zmdi zmdi-alert-octagon zmd-2x'></i>
-						<strong>SOS</strong>
+						<strong>S O S</strong>
 					</a>
 				</div>
 			</div>

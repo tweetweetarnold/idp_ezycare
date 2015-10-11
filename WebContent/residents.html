@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>EzyCare</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <link rel="stylesheet" href="./css/font-awesome.min.css" />
 <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
@@ -21,110 +20,113 @@
 	<div data-role="page">
 		<nd2-include data-src="./pages/panel.left.html"></nd2-include>
 
-		<div data-role="header" data-position="fixed" class="wow fadeInDown"
-			data-wow-delay="0.2s">
-			 <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn"
-				data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+		<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+				<i class="zmdi zmdi-menu"></i>
+			</a>
 			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Residents</h1>
 		</div>
 
 		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
 			<ul data-role="listview" data-filter="true" data-filter-reveal="false" data-filter-placeholder="Searching for Resident...">
-				<li data-role="list-divider">Friends</li>
+				<li data-role="list-divider">All Residents</li>
 				<li>
-					<a href="resident.html">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Ethel Chancy</h2>
-						<p>ehtel.chancy@example.com</p>
+						<p>Bed 101</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Lorean Gainer</h2>
-						<p>lorean87@mail.com</p>
+						<p>Bed 102</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/3/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Juliet Gieseke</h2>
-						<p>flowerpower69@rainbow.com</p>
+						<p>Bed 103</p>
 					</a>
 				</li>
-				
-				<li data-role="list-divider">Work</li>
-				
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/6/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Gale Cecil</h2>
-						<p>gale.cecil@company.com</p>
+						<p>Bed 104</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/5/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Bernard Desrosier</h2>
-						<p>bernhard.desrosier@company.com</p>
+						<p>Bed 105</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/7/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Emerita Scholl</h2>
-						<p>emerita.scholl@company.com</p>
+						<p>Bed 106</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/8/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Elmer Eyer</h2>
-						<p>elmer.eyer@company.com</p>
+						<p>Bed 107</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/9/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Shona Mckibben</h2>
-						<p>shona.mckibben@company.com</p>
+						<p>Bed 108</p>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="resident-summary.html">
 						<img src="//lorempixel.com/150/150/people/10/" class="ui-thumbnail ui-thumbnail-circular" />
 						<h2>Hilma Mercer</h2>
-						<p>hilma.mercer@company.com</p>
+						<p>Bed 109</p>
 					</a>
 				</li>
 			</ul>
 		</div>
 
+		<!-- footer -->
 		<div data-role="footer" data-position="fixed">
 			<div class='row around-xs'>
 				<div class='col-xs-auto'>
-					<a href='home.html'
-						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
+					<a href='home.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
+						<i class='zmdi zmdi-home zmd-2x'></i>
+						<strong>Home</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='#'
+					<a href='residents.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Residents</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-accounts zmd-2x'></i>
+						<strong>Residents</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='appointment.html'
-						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i> <strong>Appointment</strong>
+					<a href='appointment.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-calendar-check zmd-2x'></i>
+						<strong>Appointment</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='sos.html'
-						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i> <strong>S O S</strong>
+					<a href='sos.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
+						<i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+						<strong>S O S</strong>
 					</a>
 				</div>
 			</div>
