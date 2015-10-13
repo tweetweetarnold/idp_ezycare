@@ -10,8 +10,6 @@
 <link rel="stylesheet" href="./vendor/wow/animate.css" />
 <link rel="stylesheet" href="./css/nativedroid2.css" />
 
-<link rel="import" href="footer.html" />
-
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -30,9 +28,9 @@
 		</div>
 
 		<!-- profile -->
-		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s" data-display="overlay" data-position-fixed="true">
 			<div class='nd2-sidepanel-profile wow fadeInDown'>
-				<img class='profile-background' src="http://adamfirthphotography.com/wp-content/uploads/2014/04/Maroubra-Beach-Blog-400x200.jpg" />
+<!-- 				<img class='page-profile-background' src="img/Maroubra-Beach-Blog-400x200.jpg" /> -->
 				<div class="row">
 					<div class='col-xs-4 center-xs'>
 						<div class='box'>
@@ -40,7 +38,7 @@
 						</div>
 					</div>
 					<div class='col-xs-8'>
-						<div class='box profile-text'>
+						<div class='box profile-text-main'>
 							<strong>Jane Doe</strong>
 							<span class='subline'>Super Power User</span>
 						</div>
@@ -49,28 +47,49 @@
 			</div>
 			<!-- end profile -->
 
-                            <form method="post" action="#">
-                    <label for="fname">Email:</label>
-                    <input type="text" name="email" id="email" value="test@gmail.com">
-                  </form>
+			<!-- resident tabs -->
+			<a href="resident-main.html" class="ui-btn clr-primary ui-mini ui-btn-inline">Feeds</a>
+			<a href="resident-contact.html" class="ui-btn ui-mini ui-btn-inline">Contact</a>
+			<a href="resident-summary.html" class="ui-btn ui-mini ui-btn-inline">Summary</a>
+			<a href="resident-appointment.html" class="ui-btn ui-mini ui-btn-inline">Appt</a>
+			<br>
+			<br>
+			<!-- end resident tabs -->
+
+			<!-- post something -->
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="row">
+					<div class="col-xs-10">
+						<textarea cols="40" rows="8" name="textarea2" id="textarea2b" data-clear-btn="true" placeholder="Post something about the resident here..."></textarea>
+					</div>
+					<div class='col-xs-2'>
+						<a style="float: right" href="#" class="ui-btn ui-mini ui-btn-inline ui-btn-icon-block">
+							<i class='zmdi zmdi-edit zmd-2x'></i>
+							POST
+						</a>	
+					</div>
+				</div>
+			</div>
 
 			<hr class="inset">
 
 			<!-- newsfeed -->
 			<ul data-role="listview" data-icon="false">
-				<li data-role="list-divider">Reset Password</li>
+				<li data-role="list-divider">Resident's Newsfeed</li>
 				<li>
-					 <form method="post" action="#">
-                    <label for="opassword">Old Password:</label>
-                    <input type="password" name="opassword" id="opassword" value="" autocomplete="off">
-                    <label for="npassword">New Password:</label>
-                    <input type="password" name="npassword" id="npassword" value="" autocomplete="off">
-                    <label for="cpassword">Confirm Password:</label>
-                    <input type="password" name="cpassword" id="cpassword" value="" autocomplete="off">
-                  </form>
-
+					<a href="#">
+						<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
+						<h3>11 Oct, Sun, 1830hrs</h3>
+						<p>Jack fell down in the toilet at about 5pm just now</p>
+					</a>
 				</li>
-				
+				<li>
+					<a href="#">
+						<img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+						<h3>11 Oct, Sun, 1500hrs</h3>
+						<p>Jack choked on fishballs during lunch</p>
+					</a>
+				</li>
 			</ul>
 
 		</div>
@@ -85,7 +104,10 @@
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='residents.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
+					<a href='residents.html'
+						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'
+					>
 						<i class='zmdi zmdi-accounts zmd-2x'></i>
 						<strong>Residents</strong>
 					</a>
