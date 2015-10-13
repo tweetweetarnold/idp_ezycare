@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="./vendor/waves/waves.min.css" />
 <link rel="stylesheet" href="./vendor/wow/animate.css" />
 <link rel="stylesheet" href="./css/nativedroid2.css" />
+<link rel="stylesheet" href="./css/style.css" />
+
 
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,7 +20,7 @@
 </head>
 <body>
 
-	<div data-role="page">
+	<div data-role="page" id="appointments">
 		<nd2-include data-src="./pages/panel.left.html"></nd2-include>
 
 		<div data-role="header" data-position="fixed" class="wow fadeInDown"
@@ -30,16 +32,54 @@
 
 		<div role="main" class="ui-content wow fadeIn" data-inset="false"
 			data-wow-delay="0.2s">
-
-			<h4>Header Example</h4>
-			<p>See an animated example on the top. You can simply remove the
-				WOW.js-Tags to avoid animation.</p>
-
-			<h4>Footer Example</h4>
-			<p>See bottom :-)</p>
-
-			<h4>Extra: bottom-sheet</h4>
-			<p>Click the top-right-corner</p>
+                            
+			<ul id="appointmentList" data-role="listview"   data-filter="true" data-filter-reveal="false" data-filter-placeholder="Searching for Resident...">
+				<li data-role="list-divider">All Appointment</li>
+				<li>
+					<a href="resident-appointment.html">
+						<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
+						<h2>Ethel Chancy</h2>
+						<p>Bed 101</p>
+                                                
+                                        
+                                                 
+					</a> 
+                            <!--           <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+                              -->
+     <div class="split-custom-wrapper">
+            <a href="#confirm"    data-role="button" class="split-custom-button" data-icon="check" data-rel="popup" data-theme="d" data-iconpos="notext"></a>
+            <a href="edit_appointment.html"    data-role="button" class="split-custom-button" data-icon="plus"  data-theme="a" data-iconpos="notext"></a>           
+      
+  
+     </div>
+          
+    
+    
+				</li>
+				<li>
+					<a href="resident-appointment.html">
+						<img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+						<h2>Lorean Gainer</h2>
+						<p>Bed 102</p>
+                                                
+					</a>
+                                     <div class="split-custom-wrapper">
+            <a href="#confirm"    data-role="button" class="split-custom-button" data-icon="check" data-rel="popup" data-theme="d" data-iconpos="notext"></a>
+            <a href="edit_appointment.html"    data-role="button" class="split-custom-button" data-icon="plus"  data-theme="a" data-iconpos="notext"></a>           
+      
+  
+     </div>
+                                    
+                              <!--
+                                     <div class="split-custom-wrapper">
+            <a href="#confirm" data-role="button" class="split-custom-button" data-icon="check" data-rel="dialog" data-theme="d" data-iconpos="notext"></a>
+          <a href="edit_appointment.html" data-role="button" class="split-custom-button"  data-icon="plus" data-rel="dialog" data-theme="d" data-iconpos="notext"></a>           
+        
+           </div>
+                              -->
+				</li>
+				
+			</ul>
 
 
 		</div>
@@ -72,7 +112,40 @@
 				</div>
 			</div>
 		</div>
+                
+                <!--
+                <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+    <h3>Purchase Album?</h3>
+<p>Your download will begin immediately on your mobile device when you purchase.</p>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Buy: $10.99</a>
+    <a href="index.html" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+</div> -->
+                
+                <div id="confirm" class="ui-content" data-role="popup" data-theme="a" data-overlay-theme="b">
+        <p id="question">Are you sure you want to mark this complete?</p>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
+            </div>
+            <div class="ui-block-b">
+                <a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+            </div>
+        </div>
+    </div> 
 	</div>
+    
+    <!--
+     <div id="confirm" class="ui-content" data-role="popup" data-theme="a" data-overlay-theme="b">
+        <p id="question">Are you sure you want to mark this complete?</p>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
+            </div>
+            <div class="ui-block-b">
+                <a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+            </div>
+        </div>
+    </div> -->
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery-ui.min.js"></script>
@@ -81,6 +154,8 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
+        
+        <script src="./js/appointment.js"></script>
 
 </body>
 </html>
