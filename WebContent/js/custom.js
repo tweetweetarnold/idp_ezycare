@@ -11,7 +11,6 @@ localStorage.setItem(data);
  
  for (var r in residents) {
 	 html += '\
-		 
 		<li>
 			<a href="resident-summary.html">
 				<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
