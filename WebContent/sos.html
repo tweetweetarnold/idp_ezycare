@@ -32,6 +32,8 @@
 
             <div role="main" class="ui-content wow fadeIn" data-inset="false"
                  data-wow-delay="0.2s">
+                
+                <div style="text-align:center"><h3>SOS Request is sending in</h3></div>
 
                 <div id='count3' style="text-align:center">
                     <img src='./img/SOS_3s.png'/>
@@ -43,50 +45,49 @@
                     <img src='./img/SOS_1s.png'/>
                 </div>
                 <div id='cancelSOS' style="text-align:center">
-                    <a href="home.html" class="ui-btn" id="cancelButtonContent">Cancel</a>
+                    <a href="home.html" class="ui-btn" id="cancelButtonContent"></a>
                 </div>  
-
-                <div data-role="main" class="ui-content">
-                   
-<!--                     <a href="#myPopup" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a> -->
-
-                    <div data-role="popup" id="myPopup" class="ui-content">
-                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-                        <h2>SOS Sent</h2>
-                    </div>
-                </div>
 
                 <div data-role="content">
                     <div data-role="popup" id="popSosSent" data-overlay-theme="a">
                         <div data-role="content">
-                            <p>SOS Sent</p>
+                            <h3>SOS Sent</h3>
                         </div>
                     </div>
                 </div>
 
-                 <div data-role="content">
+<!--                 <div data-role="content">
                     <div data-role="popup" id="popSosRequest" data-overlay-theme="a">
                         <div data-role="header">
                             <h1>Emergency Alert</h1>
+                            <h4 style="text-align:right">17 Sep, 11:00 AM</h4>
                         </div>
                         <div data-role="content">
                             <p>Juliet is calling for help from level 3.</p>
                         </div>
+                        <div style="text-align:right">
+                            <a href="home.html" class="ui-btn" id="comingButton">Coming</a>
+                            <a href="home.html" class="ui-btn" id="dismissButton_1">Dismiss</a>
+                        </div>
+                    </div>
+                </div>-->
+                
+                 <div data-role="content">
+                    <div data-role="popup" id="popSosResponse" data-overlay-theme="a">
+                        <div data-role="header">
+                            <h1>Emergency Notice</h1>
+                            <h4 style="text-align:right">17 Sep, 11:05 AM</h4>
+                        </div>
+                        <div data-role="content">
+                            <p>Babarella is coming.</p>
+                        </div>
+                        <div style="text-align:right">
+                            <a href="home.html" class="ui-btn" id="dismissButton_2">Dismiss</a>
+                        </div>
                     </div>
                 </div>
                 
-<!--                  <div data-role="content"> -->
-<!--                     <div data-role="popup" id="popSosResponse" data-overlay-theme="a"> -->
-<!--                         <div data-role="header"> -->
-<!--                             <h1>Emergency Alert</h1> -->
-<!--                         </div> -->
-<!--                         <div data-role="content"> -->
-<!--                             <p>Babarella is coming.</p> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-
-
+                
 <!--                 <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open Dialog Popup</a> -->
 <!--                 <div data-role="popup" id="myPopupDialog"> -->
 <!--                     <div data-role="header"> -->
@@ -139,7 +140,6 @@
         <script src="./vendor/wow/wow.min.js"></script>
         <script src="./js/nativedroid2.js"></script>
         <script src="nd2settings.js"></script>
-<!--        <script src="./js/sos.js"></script>-->
         <script src="./js/sos2.js"></script>
 
     </body>
