@@ -54,7 +54,7 @@ var residentList = [ {
 	appt : [ {
 		date : "5 Nov",
 		time : 1200,
-		address : "Singapore General Hospital"
+		address : "National University Hospital"
 	}, {
 		date : "11 Dec",
 		time : 1200,
