@@ -58,9 +58,6 @@ $("#register-in").click(function(event) {
 	}else{
 		$("#registerErrorMessage").html("Password does not match, try again.");
 	}
-	
-	
-
 	// setTimeout(function () {
 	// window.location.href = "home.html"; //will redirect to your blog page (an
 	// ex: blog.html)
