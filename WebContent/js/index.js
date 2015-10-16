@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	$("#registerFormContainer").hide();
+	
+	localStorage.setItem('username', 'Juliet');
+//	localStorage.setItem('password', '123');
 });
 
 $("#login-button").click(function(event) {
