@@ -1,24 +1,27 @@
-var data = ''
+//$(document).ready(function() {
+//	getResidents();
+//});
+
+
+//
+//function getResidents() {
+	var residentListString = localStorage.getItem("residentList");
+	var residentList = JSON.parse(residentListString);
+//	console.log(residentList);
+	var residentshtml = '<li data-role="list-divider">All Residents</li>';
 	
-localStorage.setItem(data);
+	for ( var r in residentList) {
+		var resident = residentList[r];
+		
+		residentshtml += '\
+		<li>\
+		<a href="resident-summary.html">'
+				+ resident.image + 
+				'<h2>' + resident.name + '</h2>\
+				<p>Bed ' + resident.bed + '</p>\
+			</a>\
+		</li>';
+	}
 
-
-
- var residents = JSON.parse(localStorage.getItem("residents"));
- 
- 
- var html = '<li data-role="list-divider">All Residents</li>';
- 
- for (var r in residents) {
-	 html += '\
-		<li>
-			<a href="resident-summary.html">
-				<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
-				<h2>Ethel Chancy</h2>
-				<p>Bed 101</p>
-			</a>
-		</li>
- }
- 
- 
- $('#residents').html(html);
+	$('#residents').html(residentshtml);
+//}
