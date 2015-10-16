@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<div data-role="page">
+	<div data-role="page" id='resident-main'>
 		<nd2-include data-src="./pages/panel.left.html"></nd2-include>
 
 		<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
@@ -58,20 +58,21 @@
 			<!-- end resident tabs -->
 
 			<!-- post something -->
-			<div class="col-xs-12 col-sm-6 col-md-4">
-				<div class="row">
-					<div class="col-xs-10">
-						<textarea cols="40" rows="8" name="textarea2" id="textarea2b" data-clear-btn="true" placeholder="Post something about the resident here..."></textarea>
-					</div>
-					<div class='col-xs-2'>
-						<a style="float: right" href="#" class="ui-btn ui-mini ui-btn-inline ui-btn-icon-block">
-							<i class='zmdi zmdi-edit zmd-2x'></i>
-							POST
-						</a>	
+			<form id='createFeed'>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="row">
+						<div class="col-xs-10">
+							<textarea id='feedText' cols="40" rows="8" name="textarea2" id="textarea2b" data-clear-btn="true" placeholder="Post something about the resident here..."></textarea>
+						</div>
+						<div class='col-xs-2'>
+							<a style="float: right" href="#" class="ui-btn ui-mini ui-btn-inline ui-btn-icon-block">
+								<input type="button" onclick="postFeed()" value="POST">
+<!-- 								<i class='zmdi zmdi-edit zmd-2x'></i> -->
+							</a>	
+						</div>
 					</div>
 				</div>
-			</div>
-
+			</form>
 			<hr class="inset">
 
 			<!-- newsfeed -->

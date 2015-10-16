@@ -30,21 +30,20 @@
 		</div>
 
 
-		<div role="main" class="ui-content wow fadeIn" data-inset="false"
-			data-wow-delay="0.2s">
+		<!-- profile -->
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s" data-display="overlay" data-position-fixed="true">
 			<div class='nd2-sidepanel-profile wow fadeInDown'>
-				<!-- 				<img class='profile-background' src="http://adamfirthphotography.com/wp-content/uploads/2014/04/Maroubra-Beach-Blog-400x200.jpg" /> -->
+<!-- 				<img class='page-profile-background' src="img/Maroubra-Beach-Blog-400x200.jpg" /> -->
 				<div class="row">
 					<div class='col-xs-4 center-xs'>
-						<div class='box'>
-							<img class="profile-thumbnail"
-								src="http://rs857.pbsrc.com/albums/ab132/ILuvAM/Jack%20Sparrow/jacksparrow.jpg~c200" />
+						<div class='box' id='residentPic'>
+							<img class="profile-thumbnail" src="http://rs857.pbsrc.com/albums/ab132/ILuvAM/Jack%20Sparrow/jacksparrow.jpg~c200" />
 						</div>
 					</div>
 					<div class='col-xs-8'>
 						<div class='box profile-text-main'>
-							<strong>Jane Doe</strong> <span class='subline'>Super
-								Power User</span>
+							<strong id='residentName'>Jane Doe</strong>
+							<span class='subline' id='bed'>Super Power User</span>
 						</div>
 					</div>
 				</div>
@@ -78,146 +77,148 @@
 					</div>
 				</div>
 			</div>
+			
+			<div>
+				<div data-role="collapsible" data-inset="false"
+					data-collapsed-icon="carat-d" data-expanded-icon="carat-d"
+					data-iconpos="right">
+					<h3 id="drugName">Ibuprofen</h3>
+					<form method="post" id="displayForm" action="#">
+	                                    <table id="displayTable">
+	                                        <tr>
+	                                            <td><b>Dosage:</b></td>
+	                                            <td id='dosage'>400mg</td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Frequency:</b></td>
+	                                             <td id='frequency'>Twice a day</td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Began on:</b></td>
+	                                             <td id='startDate'>17 May 2015</td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Side Effects:</b></td>
+	                                             <td id='sideEffect'></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td></td>
+	                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button></td>
+	                                        </tr>
+	                                    </table>
+					</form>
+	                                
+	                                <form method="post" id="editableForm" action="#">
+	                                     <table id="displayTable">
+	                                        <tr>
+	                                            <td><b>Dosage:</b></td>
+	                                            <td>
+	                                                <select id='dosageEdit'>
+	                                                    <option value="100mg">100mg</option>
+	                                                    <option value="200mg">200mg</option>
+	                                                    <option value="300mg">300mg</option>
+	                                                    <option value="400mg">400mg</option>
+	                                                    <option value="500mg">500mg</option>
+	                                                </select>
+	                                            </td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Frequency:</b></td>
+	                                            <td>
+	                                                <select id='frequencyEdit'>
+	                                                    <option value="Once a day">Once a day</option>
+	                                                    <option value="Twice a day">Twice a day</option>
+	                                                    <option value="Thrice a day">Thrice a day</option>
+	                                                 </select>   
+	                                            </td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Began on:</b></td>
+	                                             <td><input type="date" id='startDateEdit'></td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Side Effects:</b></td>
+	                                             <td><textarea cols="40" rows="8" name="textarea" id="sideEffectEdit"></textarea></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td></td>
+	                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="saveBtn_medicine">Save</button></td>
+	                                        </tr>
+	                                    </table>
+					</form>
+				</div>
+	                      
+				<div data-role="collapsible" data-inset="false"
+					data-collapsed-icon="carat-d" data-expanded-icon="carat-d"
+					data-iconpos="right">
+					<h3>Paracetamol</h3>
+					<form method="post" id="displayForm" action="#">
+	                                    <table id="displayTable">
+	                                        <tr>
+	                                            <td><b>Dosage:</b></td>
+	                                            <td>200mg</td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Frequency:</b></td>
+	                                             <td>Twice a day</td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Began on:</b></td>
+	                                             <td>17 May 2015</td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Side Effects:</b></td>
+	                                             <td></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td></td>
+	                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button></td>
+	                                        </tr>
+	                                    </table>
+					</form>
+	                                
+	                                <form method="post" id="editableForm" action="#">
+	                                     <table id="displayTable">
+	                                        <tr>
+	                                            <td><b>Dosage:</b></td>
+	                                            <td>
+	                                                <select>
+	                                                    <option value="100mg">100mg</option>
+	                                                    <option value="200mg">200mg</option>
+	                                                    <option value="300mg">300mg</option>
+	                                                    <option value="400mg">400mg</option>
+	                                                    <option value="500mg">500mg</option>
+	                                                </select>
+	                                            </td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Frequency:</b></td>
+	                                            <td>
+	                                                <select>
+	                                                    <option value="Once a day">Once a day</option>
+	                                                    <option value="Twice a day">Twice a day</option>
+	                                                    <option value="Thrice a day">Thrice a day</option>
+	                                                 </select>   
+	                                            </td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Began on:</b></td>
+	                                             <td><input type="date" /></td>
+	                                        </tr>
+	                                         <tr>
+	                                             <td><b>Side Effects:</b></td>
+	                                             <td><textarea cols="40" rows="8" name="textarea" id="textarea"></textarea></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td></td>
+	                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="saveBtn_medicine">Save</button></td>
+	                                        </tr>
+	                                    </table>
+					</form>
+				</div>
 
-			<div data-role="collapsible" data-inset="false"
-				data-collapsed-icon="carat-d" data-expanded-icon="carat-d"
-				data-iconpos="right">
-				<h3>Ibuprofen</h3>
-				<form method="post" id="displayForm" action="#">
-                                    <table id="displayTable">
-                                        <tr>
-                                            <td><b>Dosage:</b></td>
-                                            <td>400mg</td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Frequency:</b></td>
-                                             <td>Twice a day</td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Began on:</b></td>
-                                             <td>17 May 2015</td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Side Effects:</b></td>
-                                             <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button></td>
-                                        </tr>
-                                    </table>
-				</form>
-                                
-                                <form method="post" id="editableForm" action="#">
-                                     <table id="displayTable">
-                                        <tr>
-                                            <td><b>Dosage:</b></td>
-                                            <td>
-                                                <select>
-                                                    <option value="100mg">100mg</option>
-                                                    <option value="200mg">200mg</option>
-                                                    <option value="300mg">300mg</option>
-                                                    <option value="400mg">400mg</option>
-                                                    <option value="500mg">500mg</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Frequency:</b></td>
-                                            <td>
-                                                <select>
-                                                    <option value="Once a day">Once a day</option>
-                                                    <option value="Twice a day">Twice a day</option>
-                                                    <option value="Thrice a day">Thrice a day</option>
-                                                 </select>   
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Began on:</b></td>
-                                             <td><input type="date" /></td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Side Effects:</b></td>
-                                             <td><textarea cols="40" rows="8" name="textarea" id="textarea"></textarea></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="saveBtn_medicine">Save</button></td>
-                                        </tr>
-                                    </table>
-				</form>
 			</div>
-                        
-			<div data-role="collapsible" data-inset="false"
-				data-collapsed-icon="carat-d" data-expanded-icon="carat-d"
-				data-iconpos="right">
-				<h3>Paracetamol</h3>
-				<form method="post" id="displayForm" action="#">
-                                    <table id="displayTable">
-                                        <tr>
-                                            <td><b>Dosage:</b></td>
-                                            <td>200mg</td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Frequency:</b></td>
-                                             <td>Twice a day</td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Began on:</b></td>
-                                             <td>17 May 2015</td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Side Effects:</b></td>
-                                             <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button></td>
-                                        </tr>
-                                    </table>
-				</form>
-                                
-                                <form method="post" id="editableForm" action="#">
-                                     <table id="displayTable">
-                                        <tr>
-                                            <td><b>Dosage:</b></td>
-                                            <td>
-                                                <select>
-                                                    <option value="100mg">100mg</option>
-                                                    <option value="200mg">200mg</option>
-                                                    <option value="300mg">300mg</option>
-                                                    <option value="400mg">400mg</option>
-                                                    <option value="500mg">500mg</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Frequency:</b></td>
-                                            <td>
-                                                <select>
-                                                    <option value="Once a day">Once a day</option>
-                                                    <option value="Twice a day">Twice a day</option>
-                                                    <option value="Thrice a day">Thrice a day</option>
-                                                 </select>   
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Began on:</b></td>
-                                             <td><input type="date" /></td>
-                                        </tr>
-                                         <tr>
-                                             <td><b>Side Effects:</b></td>
-                                             <td><textarea cols="40" rows="8" name="textarea" id="textarea"></textarea></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td align="right"><button type="submit" class="ui-btn ui-btn-inline" id="saveBtn_medicine">Save</button></td>
-                                        </tr>
-                                    </table>
-				</form>
-			</div>
-
-
+			
 			<!-- footer -->
 			<div data-role="footer" data-position="fixed">
 				<div class='row around-xs'>
@@ -260,5 +261,6 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
+	<script src='./js/medicine.js'></script>
 </body>
 </html>
