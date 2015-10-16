@@ -12,8 +12,24 @@ var nurse = {
 var residentList = [ {
 	name : "Alex",
 	bed : 101,
-	pastAppt : [ '11 Sep, Fri', '9 Oct, Fri' ],
-	appt : [ '6 Nov, Fri', '11 Dec, Fri' ],
+	pastAppt : [ {
+		date : "11 Sep",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "9 Oct",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
+	appt : [ {
+		date : "6 Nov",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "11 Dec",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
 	contact : [ {
 		name : "Harry Armstrong",
 		relation : "Father",
@@ -26,8 +42,24 @@ var residentList = [ {
 }, {
 	name : "John",
 	bed : 102,
-	pastAppt : [ '11 Sep, Fri', '9 Oct, Fri' ],
-	appt : [ '6 Nov, Fri', '11 Dec, Fri' ],
+	pastAppt : [ {
+		date : "11 Sep",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "9 Oct",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
+	appt : [ {
+		date : "5 Nov",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "11 Dec",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
 	contact : [ {
 		name : "Harry Armstrong",
 		relation : "Father",
@@ -40,8 +72,24 @@ var residentList = [ {
 }, {
 	name : "Charlie",
 	bed : 103,
-	pastAppt : [ '11 Sep, Fri', '9 Oct, Fri' ],
-	appt : [ '6 Nov, Fri', '11 Dec, Fri' ],
+	pastAppt : [ {
+		date : "11 Sep",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "9 Oct",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
+	appt : [ {
+		date : "6 Nov",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "11 Dec",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
 	contact : [ {
 		name : "Harry Armstrong",
 		relation : "Father",
@@ -54,8 +102,24 @@ var residentList = [ {
 }, {
 	name : "Derrick",
 	bed : 104,
-	pastAppt : [ '11 Sep, Fri', '9 Oct, Fri' ],
-	appt : [ '6 Nov, Fri', '11 Dec, Fri' ],
+	pastAppt : [ {
+		date : "11 Sep",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "9 Oct",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
+	appt : [ {
+		date : "6 Nov",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "11 Dec",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
 	contact : [ {
 		name : "Harry Armstrong",
 		relation : "Father",
@@ -68,8 +132,24 @@ var residentList = [ {
 }, {
 	name : "Jack",
 	bed : 105,
-	pastAppt : [ '11 Sep, Fri', '9 Oct, Fri' ],
-	appt : [ '6 Nov, Fri', '11 Dec, Fri' ],
+	pastAppt : [ {
+		date : "11 Sep",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "9 Oct",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
+	appt : [ {
+		date : "6 Nov",
+		time : 1200,
+		address : "Singapore General Hospital"
+	}, {
+		date : "11 Dec",
+		time : 1200,
+		address : "Singapore General Hospital"
+	} ],
 	contact : [ {
 		name : "Harry Armstrong",
 		relation : "Father",
