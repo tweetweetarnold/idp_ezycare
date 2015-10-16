@@ -15,6 +15,7 @@ $("#login-button").click(function(event) {
 	var verifyPassword = localStorage.getItem('password');
 	
 	if(username == verifyUsername){
+		$("#loginErrorMessage").html('');
 		$("#headText").html("Welcome " + username);
 		$('form').fadeOut(200);
 		$('.wrapper').addClass('form-success');

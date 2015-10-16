@@ -33,14 +33,14 @@
 <!-- 				<img class='page-profile-background' src="img/Maroubra-Beach-Blog-400x200.jpg" /> -->
 				<div class="row">
 					<div class='col-xs-4 center-xs'>
-						<div class='box'>
+						<div class='box' id='residentPic'>
 							<img class="profile-thumbnail" src="http://rs857.pbsrc.com/albums/ab132/ILuvAM/Jack%20Sparrow/jacksparrow.jpg~c200" />
 						</div>
 					</div>
 					<div class='col-xs-8'>
 						<div class='box profile-text-main'>
-							<strong>Jane Doe</strong>
-							<span class='subline'>Super Power User</span>
+							<strong id='residentName'>Jane Doe</strong>
+							<span class='subline' id='bed'>Super Power User</span>
 						</div>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 			<hr class="inset">
 
 			<!-- newsfeed -->
-			<ul data-role="listview" data-icon="false">
+			<ul data-role="listview" data-icon="false" id="news">
 				<li data-role="list-divider">Resident's Newsfeed</li>
 				<li>
 					<a href="#">
@@ -138,6 +138,7 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
+	<script src='./js/resident.js'></script>
 
 </body>
 </html>

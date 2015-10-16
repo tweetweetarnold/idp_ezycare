@@ -18,9 +18,18 @@ var nurse = {
 
 // Residents
 var residentList = [ {
-	name : "Alex",
+	name : "Jack",
 	bed : 101,
-	image : '<img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />',
+	image : '//lorempixel.com/150/150/people/1/',
+	news : [ {
+		date : "11 Oct, Sun, 1830hrs",
+		icon : "./img/ApptIcon.png",
+		description : "Alex fell down in the toilet at about 5pm just now"
+	}, {
+		date : "11 Oct, Sun, 1500hrs",
+		icon : "./img/ApptIcon.png",
+		description : "Jack choked on fishballs during lunch"
+	} ],
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -51,7 +60,7 @@ var residentList = [ {
 }, {
 	name : "John",
 	bed : 102,
-	image : '<img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />',
+	image : '//lorempixel.com/150/150/people/2/',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -82,7 +91,7 @@ var residentList = [ {
 }, {
 	name : "Charlie",
 	bed : 103,
-	image : '<img src="//lorempixel.com/150/150/people/3/" class="ui-thumbnail ui-thumbnail-circular" />',
+	image : '//lorempixel.com/150/150/people/3/',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -113,7 +122,7 @@ var residentList = [ {
 }, {
 	name : "Derrick",
 	bed : 104,
-	image : '<img src="//lorempixel.com/150/150/people/4/" class="ui-thumbnail ui-thumbnail-circular" />',
+	image : '//lorempixel.com/150/150/people/4/',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -142,9 +151,9 @@ var residentList = [ {
 		contact : 56489565
 	} ]
 }, {
-	name : "Jack",
+	name : "Alex",
 	bed : 105,
-	image : '<img src="//lorempixel.com/150/150/people/5/" class="ui-thumbnail ui-thumbnail-circular" />',
+	image : '//lorempixel.com/150/150/people/5/',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
