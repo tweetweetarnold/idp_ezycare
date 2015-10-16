@@ -23,11 +23,11 @@ var residentList = [ {
 	image : '//lorempixel.com/150/150/people/1/',
 	news : [ {
 		date : "11 Oct, Sun, 1830hrs",
-		icon : "./img/ApptIcon.png",
+		icon : "./img/NewsFeedIcon.png",
 		description : "Alex fell down in the toilet at about 5pm just now"
 	}, {
 		date : "11 Oct, Sun, 1500hrs",
-		icon : "./img/ApptIcon.png",
+		icon : "./img/NewsFeedIcon.png",
 		description : "Jack choked on fishballs during lunch"
 	} ],
 	pastAppt : [ {
@@ -56,7 +56,35 @@ var residentList = [ {
 		name : "Angelababy",
 		relation : "Mother",
 		contact : 56489565
-	} ]
+	} ],
+	allergies : [ {
+		name : "Peanut"
+	}, {
+		name : "Soya"
+	}, {
+		name : "Egg"
+	} ],
+        diagnoses : [ {
+		name : "High Blood Pressure"
+	}, {
+		name : "Diabetes"
+	}, {
+		name : "Kidney"
+	} ],
+	medicine : [ {
+                name: "Ibuprofen",
+		dosage : "400mg",
+		frequency : "Twice a day",
+		beganon : "17 May 2015",
+                sideEffects : ""
+	},
+        {
+                name: "Paracetamol",
+		dosage : "200mg",
+		frequency : "Once a day",
+		beganon : "1 Nov 2015",
+                sideEffects : ""
+	}]
 }, {
 	name : "John",
 	bed : 102,
