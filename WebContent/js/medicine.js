@@ -24,6 +24,7 @@ $("#saveBtn_medicine").click(function(event) {
 	event.preventDefault();
 	
 	$('#dosageEdit').val();
+	$('#dosageEdit').val();
 	$("#frequencyEdit").val();
 	$("#startDateEdit").val();
 	$("#sideEffectEdit").val();
