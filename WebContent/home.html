@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>EzyCare</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <link rel="stylesheet" href="./css/font-awesome.min.css" />
 <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
@@ -21,66 +20,109 @@
 	<div data-role="page">
 		<nd2-include data-src="./pages/panel.left.html"></nd2-include>
 
-		<div data-role="header" data-position="fixed" class="wow fadeInDown"
-			data-wow-delay="0.2s">
-			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn"
-				data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+		<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
+				<i class="zmdi zmdi-menu"></i>
+			</a>
 			<h1 class="wow fadeIn " data-wow-delay='0.4s'>Home</h1>
 		</div>
 
-		<div role="main" class="ui-content wow fadeIn" data-inset="false"
-			data-wow-delay="0.2s">
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 			<br />
 			<ul data-role="listview" data-icon="false">
-				<!--				<li data-role="list-divider">Probably can use this to do the timing thing</li>-->
-				<li><a href="resident.html"> <img
-						src="./img/ProfileIcon.png" class="ui-thumbnail" />
-						<h2 align="right">1 min</h2>
-						<p>Mary profile is being updated</p>
-				</a></li>
-				<li><a href="resident.html"> <img src="./img/ApptIcon.png"
-						class="ui-thumbnail" />
-						<h2 align="right">2 min</h2>
-						<p>Joe appointment is updated</p>
-				</a></li>
-				<li><a href="resident.html"> <img
-						src="./img/MedicineIcon.png" class="ui-thumbnail" />
-						<h2 align="right">5 min</h2>
-						<p>Tan Mei Mei medication is updated</p>
-				</a></li>
-				<li><a href="resident.html"> <img
-						src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
-						<h2 align="right">10 min</h2>
-						<p>Jenny newsfeed is updated</p>
-				</a></li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">30m</h2>
+						<p>Charlie got scalded by hot porridge during lunch</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">40m</h2>
+						<p>Alex wet his pants in the morning</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">1h</h2>
+						<p>Jack fell down in the toilet</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">9h ago</h2>
+						<p>Jack suffered a seizure</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">9h ago</h2>
+						<p>Derrick crept out to watch TV during wee hours</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">1d ago</h2>
+						<p>Alex resisted taking his bladder pills</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/ApptIcon.png" class="ui-thumbnail" />
+						<h2 align="right">1d ago</h2>
+						<p>John forgot to go for medical appointment</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/ApptIcon.png" class="ui-thumbnail" />
+						<h2 align="right">1d ago</h2>
+						<p>Charlie's medical appointment is updated</p>
+					</a>
+				</li>
+				<li>
+					<a href="resident.html">
+						<img src="./img/MedicineIcon.png" class="ui-thumbnail" />
+						<h2 align="right">1d ago</h2>
+						<p>Derrick's medication is updated</p>
+					</a>
+				</li>
 			</ul>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
 			<div class='row around-xs'>
 				<div class='col-xs-auto'>
-					<a href='#'
-						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
+					<a href='#' class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-home zmd-2x'></i>
+						<strong>Home</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='residents.html'
-						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Resident</strong>
+					<a href='residents.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
+						<i class='zmdi zmdi-accounts zmd-2x'></i>
+						<strong>Resident</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='appointment.html'
-						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i>
+					<a href='appointment.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-calendar-check zmd-2x'></i>
 						<strong>Appt</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
-					<a href='sos.html'
-						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+					<a href='sos.html' class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button' data-ajax='false'>
+						<i class='zmdi zmdi-alert-octagon zmd-2x'></i>
 						<strong>S O S</strong>
 					</a>
 				</div>
