@@ -1,7 +1,13 @@
+function showDelete(id){
+	$("#confirm").popup("open");
+}
+
+
 function deleteDiag(id) {
 	var diag = '#diag' + id;
 	$(diag).hide();
 }
+
 
 
 

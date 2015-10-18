@@ -66,27 +66,29 @@
 				data-split-icon="minus" data-split-theme="d">
 				<li id='diag1'><a href="#demo-mail">
 						<h3 class="topic">High Blood Pressure</h3>
-				</a> <a href="#" onclick='deleteDiag(1)' class="delete">Delete</a></li>
+				</a> <a href="#" onclick='showDelete(1)' class="delete">Delete</a></li>
 				<li id='diag2'><a href="#demo-mail">
 						<h3 class="topic">Diabetes</h3>
-				</a> <a href="#" onclick='deleteDiag(2)' class="delete">Delete</a></li>
+				</a> <a href="#" onclick='showDelete(2)' class="delete">Delete</a></li>
 				<li id='diag3'><a href="#demo-mail">
 						<h3 class="topic">Kidney</h3>
-				</a> <a href="#" onclick='deleteDiag(3)' class="delete">Delete</a></li>
+				</a> <a href="#" onclick='showDelete(3)' class="delete">Delete</a></li>
 			</ul>
 		</div>
-
-		<div id="confirm" class="ui-content" data-role="popup"
-			data-theme="none">
-			<p id="question">Are you sure you want to delete</p>
-			<div class="ui-grid-a">
-				<div class="ui-block-a">
-					<a id="yes" data-role="button" data-mini="true" data-shadow="false"
-						data-theme="b" data-rel="back">Yes</a>
-				</div>
-				<div class="ui-block-b">
-					<a id="cancel" data-role="button" data-mini="true"
-						data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+	
+		<div data-role="content">
+			<div id="confirm" class="ui-content" data-role="popup"
+				data-theme="none">
+				<p id="question">Are you sure you want to delete</p>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="yes" onclick='deleteDiag(1)' data-role="button" data-mini="true" data-shadow="false"
+							data-theme="b" data-rel="back">Yes</a>
+					</div>
+					<div class="ui-block-b">
+						<a id="cancel" data-role="button" data-mini="true"
+							data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+					</div>
 				</div>
 			</div>
 		</div>
