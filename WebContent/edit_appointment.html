@@ -30,17 +30,20 @@
 
 		<div role="main" class="ui-content wow fadeIn" data-inset="false"
 			data-wow-delay="0.2s">
-
+                    Resident Name : John <br/> &nbsp;
 			<form method="post" action="#">
-				<label for="fname">Resident name:</label> <input type="text"
-					name="fname" id="fname"> <label for="fname">Date:</label> <input
-					type="date" name="date" id="date" value=""> <label
-					for="fname">Time:</label> <input type="text" name="fname"
-                                               id="fname" placeholder="hh:mm AM"> <label for="fname">Location:</label> <select
+                             
+                                <label for="date">Date:</label> <input
+					type="date" name="date" id="date" value="2015-10-12"> 
+                                <label
+					for="time">Time:</label> <input type="text" name="fname"
+                                               id="fname" placeholder="hh:mm AM" value="10:00 AM"> 
+                                        
+                                      <label for="location">Location:</label> <select
 					name="select-choice-mini" id="select-choice-mini" data-mini="true"
 					data-inline="true">
 					<option value="standard">NUH</option>
-					<option value="rush">PolyClinic</option>
+					<option value="rush">Poly Clinic</option>
 					<option value="express">SGH</option>
 
 				</select> <label for="textarea">Remark:</label>
@@ -48,7 +51,7 @@
 
 				<a href="appointment.html" class="ui-btn ui-btn-inline"
 					data-role="button"> Cancel</a>
-				<a href="appointment.html" class="ui-btn ui-btn-inline"
+				<a href="updated_appointment1.html" class="ui-btn ui-btn-inline"
 					data-role="button"> Submit</a>
 
 			</form>
@@ -96,8 +99,8 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
-
-
+       
+        <script src='./js/appointment.js'></script>
 
 </body>
 </html>
