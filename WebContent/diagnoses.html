@@ -39,14 +39,22 @@
                         </div>
                 </div>
                 <div class="col-xs-2">
-                        <div class="box">
-                                <a href="add_medicine.html" data-role="button"
-                                        class="split-custom-button " data-icon="plus" data-theme="a"
-                                        data-iconpos="notext"></a>
+                    <div class="box">
+                        <a href="#popCreate" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline"><b>+</b></a>
+                        <div data-role="popup" id="popCreate" data-overlay-theme="a">
+                        <div data-role="header">
+                            <h2>Add New</h2>
                         </div>
-                </div>
-             </div>
-                
+                        <form>
+                            <div style="padding:10px 20px;">
+                                <input type="text" id="diagnosesInput" value="" placeholder="Input diagnoses" data-theme="a" />
+                                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                 </div>
+               
                 
                  <div data-role="content">
                     <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="minus" data-split-theme="d">
