@@ -22,6 +22,19 @@ $(document).ready(function() {
 //	}, 4400);
 	
 	setTimeout(function(){
+		$('#sosTitle').html('SOS Request is sent');
+		
+		var htmlContent = 
+			'<div data-role="content" data-overlay-theme="a"> \
+					<div data-role="header">\
+						<h1 style="color:red">Emergency Alert</h1>\
+						<h4 style="text-align: center">17 Sep, 11:00 AM</h4>\
+					</div>\
+					<div data-role="content" id="requestContent">\
+						<p>Juliet is calling for help from level 3.</p>\
+					</div>\
+			</div>';
+		$('#count1').html(htmlContent);
 		$('#cancelButtonContent').html("Press to CANCEL the request!").css({"background-color": "#FFB000"});
 		$('#cancelButtonContent').on("mouseenter", function() {
 			$(this).css({
@@ -42,11 +55,27 @@ $(document).ready(function() {
 	
 	setTimeout(function(){
 		$("#popSosSent").popup("close");
+		
     }, 5500);
 	
-	
+	setTimeout(function(){
+		$("#popSosResponse").popup("open");
+		var content = '<p>Juliet is calling for help from level 3.</p>\
+			</br>\
+			<strong>Request been Accepted</strong>\
+			<p>Babarella is coming.</p>';
+		$("#requestContent").html(content);
+	},8500);
 	
 });
+
+
+function cancelRequest(){
+	$("#cancelReuqest").popup("open");
+	setTimeout(function(){
+		window.location.href = "home.html";
+	},2500);
+}
 
 //$("#cancelSOS").click(function(event) {
 //	event.preventDefault();

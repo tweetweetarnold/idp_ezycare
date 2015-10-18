@@ -1,146 +1,147 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>EzyCare</title>
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<head>
+<title>EzyCare</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <link rel="stylesheet" href="./css/font-awesome.min.css" />
-        <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" href="./vendor/waves/waves.min.css" />
-        <link rel="stylesheet" href="./vendor/wow/animate.css" />
-        <link rel="stylesheet" href="./css/nativedroid2.css" />
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="./vendor/waves/waves.min.css" />
+<link rel="stylesheet" href="./vendor/wow/animate.css" />
+<link rel="stylesheet" href="./css/nativedroid2.css" />
 
-        <meta name="mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    </head>
-    <body>
+</head>
+<body>
 
-        <div data-role="page" id="sosPage">
-            <nd2-include data-src="./pages/panel.left.html"></nd2-include>
+	<div data-role="page" id="sosPage">
+		<nd2-include data-src="./pages/panel.left.html"></nd2-include>
 
-            <div data-role="header" data-position="fixed" class="wow fadeInDown"
-                 data-wow-delay="0.2s">
-                <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn"
-                   data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
-                <h1 class="wow fadeIn" data-wow-delay='0.4s'>SOS</h1>
-            </div>
+		<div data-role="header" data-position="fixed" class="wow fadeInDown"
+			data-wow-delay="0.2s">
+			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn"
+				data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+			<h1 class="wow fadeIn" data-wow-delay='0.4s'>SOS</h1>
+		</div>
 
 
 
-            <div role="main" class="ui-content wow fadeIn" data-inset="false"
-                 data-wow-delay="0.2s">
-                
-                <div style="text-align:center"><h3>SOS Request is sending in</h3></div>
+		<div role="main" class="ui-content wow fadeIn" data-inset="false"
+			data-wow-delay="0.2s">
 
-                <div id='count3' style="text-align:center">
-                    <img src='./img/SOS_3s.png'/>
-                </div>
-                <div id='count2' style="text-align:center">
-                    <img src='./img/SOS_2s.png'/>
-                </div>
-                <div id='count1' style="text-align:center">
-                    <img src='./img/SOS_1s.png'/>
-                </div>
-                <div id='cancelSOS' style="text-align:center">
-                    <a href="home.html" class="ui-btn" id="cancelButtonContent">Cancel</a>
-                </div>  
+			<div style="text-align: center">
+				<h3 id="sosTitle">SOS Request is sending in</h3>
+			</div>
+			<div id='count3' style="text-align: center">
+				<img src='./img/SOS_3s.png' />
+			</div>
+			<div id='count2' style="text-align: center">
+				<img src='./img/SOS_2s.png' />
+			</div>
+			<div id='count1' style="text-align: center">
+				<img src='./img/SOS_1s.png' />
+			</div>
+			<div id='cancelSOS' style="text-align: center">
+				<a href="#" class="ui-btn" onclick="cancelRequest()" id="cancelButtonContent">Cancel</a>
+			</div>
 
-                <div data-role="content">
-                    <div data-role="popup" id="popSosSent" data-overlay-theme="a">
-                        <div data-role="content">
-                            <h3>SOS Sent</h3>
-                        </div>
-                    </div>
-                </div>
+			<div data-role="content">
+				<div data-role="popup" id="popSosSent" data-overlay-theme="a">
+					<div data-role="content">
+						<h3>SOS Sent</h3>
+					</div>
+				</div>
+			</div>
 
-<!--                 <div data-role="content">
-                    <div data-role="popup" id="popSosRequest" data-overlay-theme="a">
-                        <div data-role="header">
-                            <h1>Emergency Alert</h1>
-                            <h4 style="text-align:right">17 Sep, 11:00 AM</h4>
-                        </div>
-                        <div data-role="content">
-                            <p>Juliet is calling for help from level 3.</p>
-                        </div>
-                        <div style="text-align:right">
-                            <a href="home.html" class="ui-btn" id="comingButton">Coming</a>
-                            <a href="home.html" class="ui-btn" id="dismissButton_1">Dismiss</a>
-                        </div>
-                    </div>
-                </div>-->
-                
-                 <div data-role="content">
-                    <div data-role="popup" id="popSosResponse" data-overlay-theme="a">
-                        <div data-role="header">
-                            <h1>Emergency Notice</h1>
-                            <h4 style="text-align:right">17 Sep, 11:05 AM</h4>
-                        </div>
-                        <div data-role="content">
-                            <p>Babarella is coming.</p>
-                        </div>
-                        <div style="text-align:right">
-                            <a href="home.html" class="ui-btn" id="dismissButton_2">Dismiss</a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-<!--                 <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open Dialog Popup</a> -->
-<!--                 <div data-role="popup" id="myPopupDialog"> -->
-<!--                     <div data-role="header"> -->
-<!--                         <h1>Emergency Alert</h1> -->
-<!--                     </div> -->
+			<div data-role="content">
+				<div data-role="popup" id="popSosRequest" data-overlay-theme="a">
+					<div data-role="header">
+						<h1>Emergency Alert</h1>
+						<h4 style="text-align: right">17 Sep, 11:00 AM</h4>
+					</div>
+					<div data-role="content">
+						<p>Juliet is calling for help from level 3.</p>
+					</div>
+					<div style="text-align: right">
+						<a href="home.html" class="ui-btn" id="comingButton">Coming</a> <a
+							href="home.html" class="ui-btn" id="dismissButton_1">Dismiss</a>
+					</div>
+				</div>
+			</div>
+			
+			<div data-role="content">
+				<div data-role="popup" id="cancelReuqest" data-overlay-theme="a">
+					<div data-role="header">
+						<h1>Request Canceled</h1>
+					</div>
+					<div data-role="content">
+						<p>You will be redirect back to home page.</p>
+					</div>
+				</div>
+			</div>
+			
 
-<!--                     <div data-role="main" class="ui-content"> -->
-<!--                         <h2>Welcome to my Popup Dialog!</h2> -->
-<!--                         <p>jQuery Mobile is FUN!</p> -->
-<!--                         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Dismiss</a> -->
-<!--                     </div> -->
-<!--                 </div>     -->
+			<div data-role="content">
+				<div data-role="popup" id="popSosResponse" data-overlay-theme="a">
+					<div data-role="header">
+						<h1>Emergency Notice</h1>
+						<h4 style="text-align: right">17 Sep, 11:05 AM</h4>
+					</div>
+					<div data-role="content">
+						<p>Babarella is coming.</p>
+					</div>
+					<div style="text-align: right">
+<!-- 						<a href="home.html" class="ui-btn" id="dismissButton_2">Dismiss</a> -->
+					</div>
+				</div>
+			</div>
 
-            </div>
+		</div>
 
-            <div data-role="footer" data-position="fixed">
-                <div class='row around-xs'>
-                    <div class='col-xs-auto'>
-                        <a href='home.html'
-                           class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-                           data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
-                        </a>
-                    </div>
-                    <div class='col-xs-auto'>
-                        <a href='residents.html'
-                           class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-                           data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Resident</strong>
-                        </a>
-                    </div>
-                    <div class='col-xs-auto'>
-                        <a href='appointment.html'
-                           class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-                           data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i> <strong>Appt</strong>
-                        </a>
-                    </div>
-                    <div class='col-xs-auto'>
-                        <a href='#'
-                           class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-                           data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i> <strong>S O S</strong>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div data-role="footer" data-position="fixed">
+			<div class='row around-xs'>
+				<div class='col-xs-auto'>
+					<a href='home.html'
+						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
+					</a>
+				</div>
+				<div class='col-xs-auto'>
+					<a href='residents.html'
+						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Resident</strong>
+					</a>
+				</div>
+				<div class='col-xs-auto'>
+					<a href='appointment.html'
+						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i>
+						<strong>Appt</strong>
+					</a>
+				</div>
+				<div class='col-xs-auto'>
+					<a href='#'
+						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
+						data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+						<strong>S O S</strong>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <script src="./js/jquery.min.js"></script>
-        <script src="./js/jquery-ui.min.js"></script>
-        <script src="./js/jquery.mobile.min.js"></script>
-        <script src="./vendor/waves/waves.min.js"></script>
-        <script src="./vendor/wow/wow.min.js"></script>
-        <script src="./js/nativedroid2.js"></script>
-        <script src="nd2settings.js"></script>
-        <script src="./js/sos2.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/jquery.mobile.min.js"></script>
+	<script src="./vendor/waves/waves.min.js"></script>
+	<script src="./vendor/wow/wow.min.js"></script>
+	<script src="./js/nativedroid2.js"></script>
+	<script src="nd2settings.js"></script>
+	<script src="./js/sos2.js"></script>
 
-    </body>
+</body>
 </html>
