@@ -31,70 +31,82 @@
 			<br />
 			<ul data-role="listview" data-icon="false">
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="individual()">
 						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
 						<h2 align="right">30m</h2>
-						<p>Charlie got scalded by hot porridge during lunch</p>
+						<p>Jack fell down in the toilet at about 5pm</p>
 					</a>
 				</li>
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="individual()">
 						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
 						<h2 align="right">40m</h2>
-						<p>Alex wet his pants in the morning</p>
-					</a>
-				</li>
-				<li>
-					<a href="residents.html">
-						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
-						<h2 align="right">1h</h2>
-						<p>Jack fell down in the toilet</p>
-					</a>
-				</li>
-				<li>
-					<a href="residents.html">
-						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
-						<h2 align="right">9h ago</h2>
 						<p>Jack suffered a seizure</p>
 					</a>
 				</li>
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="notImplement()">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">1h</h2>
+						<p>Charlie got scalded by hot porridge during lunch</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="notImplement()">
+						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
+						<h2 align="right">9h ago</h2>
+						<p>Alex wet his pants in the morning</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="notImplement()">
 						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
 						<h2 align="right">9h ago</h2>
 						<p>Derrick crept out to watch TV during wee hours</p>
 					</a>
 				</li>
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="notImplement()">
 						<img src="./img/NewsFeedIcon.png" class="ui-thumbnail" />
 						<h2 align="right">1d ago</h2>
 						<p>Alex resisted taking his bladder pills</p>
 					</a>
 				</li>
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="notImplement()">
 						<img src="./img/ApptIcon.png" class="ui-thumbnail" />
 						<h2 align="right">1d ago</h2>
 						<p>John forgot to go for medical appointment</p>
 					</a>
 				</li>
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="notImplement()">
 						<img src="./img/ApptIcon.png" class="ui-thumbnail" />
 						<h2 align="right">1d ago</h2>
 						<p>Charlie's medical appointment is updated</p>
 					</a>
 				</li>
 				<li>
-					<a href="residents.html">
+					<a href="#" onclick="notImplement()">
 						<img src="./img/MedicineIcon.png" class="ui-thumbnail" />
 						<h2 align="right">1d ago</h2>
 						<p>Derrick's medication is updated</p>
 					</a>
 				</li>
 			</ul>
+			
+			<div data-role="content">
+				<div data-role="popup" id="popNotImplement" data-overlay-theme="a">
+					<div data-role="header">
+						<h1>Request Canceled</h1>
+					</div>
+					<div data-role="content">
+						<p>Sorry, the resident data has not yet integrated.</p>
+					</div>
+				</div>
+			</div>
 		</div>
+		
 
 		<div data-role="footer" data-position="fixed">
 			<div class='row around-xs'>
@@ -137,6 +149,7 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
+	<script src="./js/home.js"></script>
 
 </body>
 </html>

@@ -24,11 +24,11 @@ var residentList = [ {
 	news : [ {
 		date : "11 Oct, Sun, 1830hrs",
 		icon : "./img/NewsFeedIcon.png",
-		description : "Alex fell down in the toilet at about 5pm just now"
+		description : "Jack fell down in the toilet at about 5pm"
 	}, {
 		date : "11 Oct, Sun, 1500hrs",
 		icon : "./img/NewsFeedIcon.png",
-		description : "Jack choked on fishballs during lunch"
+		description : "Jack suffered a seizure"
 	} ],
 	pastAppt : [ {
 		date : "11 Sep",
