@@ -20,7 +20,7 @@
 </head>
 <body>
 
-	<div data-role="page" id="Diagnoses">
+	<div data-role="page" id="addDiagnoses">
 		<nd2-include data-src="./pages/panel.left.html"></nd2-include>
 
 		<div data-role="header" data-position="fixed" class="wow fadeInDown"
@@ -48,8 +48,7 @@
                         <form>
                             <div style="padding:10px 20px;">
                                 <input type="text" id="diagnosesInput" value="" placeholder="Input diagnoses" data-theme="a" />
-<!--                                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>-->
-                                <a href="addDiagnoses.html" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a> 
+                                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>
                             </div>
                         </form>
                         </div>
@@ -60,6 +59,12 @@
                 
                  <div data-role="content">
                     <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="minus" data-split-theme="d">
+                        <li>
+                            <a href="#demo-mail">
+                                <h3 class="topic">High Blood Pressure</h3>
+                            </a>
+                            <a href="#" class="delete">Delete</a>
+                        </li>
                         <li>
                         <a href="#demo-mail">
                             <h3 class="topic">Diabetes</h3>
