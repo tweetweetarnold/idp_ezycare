@@ -29,66 +29,70 @@
 				data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
 			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Allergies</h1>
 		</div>
-<br/>   
-            <div class="row between-xs">
-                <div class="col-xs-5">
-                        <div class="box">
-                                <ul data-role="listview" data-inset="false">
-                                    <li data-role="list-divider"><b>Allergies</b></li>
-                                </ul>
-                        </div>
-                </div>
-                <div class="col-xs-2">
-                    <div class="box">
-                            <a href="#popCreate" data-rel="popup" data-position-to="window"
-                                    data-transition="fade"
-                                    class="ui-btn ui-corner-all ui-shadow ui-btn-inline"><b>+</b></a>
-                            <div data-role="popup" id="popCreate" data-overlay-theme="a">
-                                    <div data-role="header">
-                                            <h2>Add New</h2>
-                                    </div>
-                                    <form>
-                                            <div style="padding: 10px 20px;">
-                                                    <input type="text" id="allergiesInput" value=""
-                                                            placeholder="Input diagnoses" data-theme="a" />
-                                                    <!--                                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>-->
-                                                    <a href="allergies2.html" data-role="button"
-                                                            class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
-                                            </div>
-                                    </form>
-                            </div>
-                    </div>
-               </div>
-             </div>
-                
-                
-                 <div data-role="content">
-                    <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="minus" data-split-theme="d">
-                        <li>
-                        <a href="#demo-mail">
-                            <h3 class="topic">Soya</h3>
-                        </a>
-                        <a href="#" class="delete">Delete</a>
-                        </li>         
-                         <li>
-                        <a href="#demo-mail">
-                            <h3 class="topic">Egg</h3>
-                        </a>
-                        <a href="#" class="delete">Delete</a>
-                        </li>           
-                    </ul>
-                 </div>
-                 <div id="confirm" class="ui-content" data-role="popup" data-theme="none">
-                    <p id="question">Are you sure you want to delete</p>
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a">
-                            <a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Yes</a>
-                        </div>
-                        <div class="ui-block-b">
-                            <a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
-                        </div>
-                    </div>
-                </div><!-- /popup -->
+		<br />
+		<div class="row between-xs">
+			<div class="col-xs-5">
+				<div class="box">
+					<ul data-role="listview" data-inset="false">
+						<li data-role="list-divider"><b>Allergies</b></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<div class="box">
+					<a href="#popCreate" data-rel="popup" data-position-to="window"
+						data-transition="fade"
+						class="ui-btn ui-corner-all ui-shadow ui-btn-inline"><b>+</b></a>
+					<div data-role="popup" id="popCreate" data-overlay-theme="a">
+						<div data-role="header">
+							<h2>Add New</h2>
+						</div>
+						<form>
+							<div style="padding: 10px 20px;">
+								<input type="text" id="allergiesInput" value=""
+									placeholder="Input allergy" data-theme="a" />
+								<!--<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>-->
+								<a href="allergies2.html" data-role="button"
+									class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div data-role="content">
+			<ul id="list" class="touch" data-role="listview" data-icon="false"
+				data-split-icon="minus" data-split-theme="d">
+				<li id='alle1'><a href="#demo-mail">
+						<h3 class="topic">Peanut</h3>
+				</a> <a href="#" onclick='showDelete(1)' class="delete">Delete</a></li>
+				<li id='alle2'><a href="#demo-mail">
+						<h3 class="topic">Soya</h3>
+				</a> <a href="#" onclick='showDelete(2)' class="delete">Delete</a></li>
+				<li id='alle3'><a href="#demo-mail">
+						<h3 class="topic">Egg</h3>
+				</a> <a href="#" onclick='showDelete(3)' class="delete">Delete</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<div id="confirm" class="ui-content" data-role="popup"
+				data-theme="none">
+				<p id="question">Are you sure you want to delete</p>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="yes" onclick='deleteAlle(1)' data-role="button" data-mini="true" data-shadow="false"
+							data-theme="b" data-rel="back">Yes</a>
+					</div>
+					<div class="ui-block-b">
+						<a id="cancel" data-role="button" data-mini="true"
+							data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /popup -->
 
 		<div data-role="footer" data-position="fixed">
 			<div class='row around-xs'>
@@ -129,8 +133,8 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
-        <script src="./js/allergies.js"></script>
+	<script src="./js/allergies.js"></script>
 
- 
+
 </body>
 </html>
