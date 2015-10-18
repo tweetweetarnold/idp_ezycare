@@ -36,3 +36,5 @@ $('#cancelButtonContent').on("mouseenter", function() {
 	};
 	$(this).css(styles);
 });
+
+
