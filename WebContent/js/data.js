@@ -22,11 +22,11 @@ var residentList = [ {
 	bed : 101,
 	image : '//lorempixel.com/150/150/people/1/',
 	news : [ {
-		date : "11 Oct, Sun, 1830hrs",
+		date : "11 Oct, Sun, 1700hrs",
 		icon : "./img/NewsFeedIcon.png",
 		description : "Jack fell down in the toilet at about 5pm"
 	}, {
-		date : "11 Oct, Sun, 1500hrs",
+		date : "11 Oct, Sun, 0300hrs",
 		icon : "./img/NewsFeedIcon.png",
 		description : "Jack suffered a seizure"
 	} ],
