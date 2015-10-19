@@ -121,13 +121,26 @@
 								<td id='sideEffect'></td>
 							</tr>
 							<tr>
-								<td></td>
-								<td align="right"><button type="submit"
-										class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button></td>
+								
+								<td>
+                                                                    <!--<button type="submit"
+										class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button>
+                                                                    -->
+                                                                    
+                                                                    <a
+							href="edit_medicine.html" class="ui-btn ui-btn-inline"
+							data-role="button">Edit</a>
+                                                                    </td>
+                                                                    
+                                                                    <td>
+                                                            <a
+							href="#deleteError" data-rel="popup" class="ui-btn ui-btn-inline"
+							data-role="button">Delete</a>
+                                                            </td>
 							</tr>
 						</table>
 					</form>
-
+<!--
 					<form method="post" id="editableForm" action="#">
 						<table id="displayTable">
 							<tr>
@@ -164,6 +177,9 @@
 							</tr>
 						</table>
 					</form>
+-->
+
+
 				</div>
 
 				<div data-role="collapsible" data-inset="false"
@@ -189,13 +205,19 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td></td>
-								<td align="right"><button type="submit"
-										class="ui-btn ui-btn-inline" id="editBtn_medicine">Edit</button></td>
+								
+								<td align="right"> <a
+							href="#editError" data-rel="popup" class="ui-btn ui-btn-inline"
+							data-role="button">Edit</a></td>
+                                                                 <td>
+                                                            <a
+							href="#deleteError" data-rel="popup" class="ui-btn ui-btn-inline"
+							data-role="button">Delete</a>
+                                                            </td>
 							</tr>
 						</table>
 					</form>
-
+<!--
 					<form method="post" id="editableForm" action="#">
 						<table id="displayTable">
 							<tr>
@@ -232,6 +254,8 @@
 							</tr>
 						</table>
 					</form>
+
+-->
 				</div>
 
 			</div>
@@ -268,6 +292,35 @@
 					</div>
 				</div>
 			</div>
+                        
+                        
+                        
+                             
+                
+                
+                 <div id="editError" class="ui-content" data-role="popup" data-theme="a"
+			data-overlay-theme="b">
+			<p id="question">Sorry! Please test with Ibuprofen  for this function.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-b">
+					<a id="cancel" data-role="button" data-mini="true"
+						data-shadow="false" data-theme="b" data-rel="back">Ok</a>
+				</div>
+			</div>
+		</div>
+                        
+                        <div id="deleteError" class="ui-content" data-role="popup" data-theme="a"
+			data-overlay-theme="b">
+			<p id="question">Sorry! Please add a new medication first to test this function.</p>
+			<div class="ui-grid-a">
+				<div class="ui-block-b">
+					<a id="cancel" data-role="button" data-mini="true"
+						data-shadow="false" data-theme="b" data-rel="back">Ok</a>
+				</div>
+			</div>
+		</div>
+                        
+                        
 		</div>
 	</div>
 
