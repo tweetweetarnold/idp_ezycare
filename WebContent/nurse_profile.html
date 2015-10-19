@@ -26,37 +26,53 @@
 			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'>
 				<i class="zmdi zmdi-menu"></i>
 			</a>
-			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Resident Profile</h1>
+			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Nurse Profile</h1>
 		</div>
 
 		<!-- profile -->
-		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+		<div role="main">
 			<div class='nd2-sidepanel-profile wow fadeInDown'>
-				<img class='profile-background' src="" />
+<!--				<img class='profile-background' src="//lorempixel.com/400/200/abstract/2/" />-->
 				<div class="row">
 					<div class='col-xs-4 center-xs'>
 						<div class='box'>
-							<img class="profile-thumbnail"
-								src="https://scontent-sin1-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/1958326_874164895967375_4514324477336607947_n.jpg?oh=e275e0e8ad6320f32633335fec62d812&oe=56923473"
-							/>
+							<img class="profile-thumbnail" src="./img/nurse.jpg" />
 						</div>
 					</div>
 					<div class='col-xs-8'>
-						<div class='box profile-text'>
-							<strong style="color: black;">Juliet</strong>
-							<span class='subline' style="color: black;">Nurse</span>
+						<div>
+                                                    <strong>Juliet</strong></br>
+							<span class='subline'>Nurse Assistant</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end profile -->
 
-			<form method="post" action="#">
-				<label for="fname">Email:</label>
-				<input type="text" name="email" id="email" value="test@gmail.com">
-			</form>
+                            <form method="post" action="#">
+                    <label for="fname">Email:</label>
+                    <input type="text" name="email" id="email" value="test@gmail.com">
+                  </form>
 
 			<hr class="inset">
+
+			<!-- newsfeed -->
+			<ul data-role="listview" data-icon="false">
+				<li data-role="list-divider">Reset Password</li>
+				<li>
+					 <form method="post" action="#">
+                    <label for="opassword">Old Password:</label>
+                    <input type="password" name="opassword" id="opassword" value="" autocomplete="off">
+                    <label for="npassword">New Password:</label>
+                    <input type="password" name="npassword" id="npassword" value="" autocomplete="off">
+                    <label for="cpassword">Confirm Password:</label>
+                    <input type="password" name="cpassword" id="cpassword" value="" autocomplete="off">
+                    <a data-role="button" class="split-custom-button" data-theme="d" data-iconpos="notext">Save</a>
+                  </form>
+
+				</li>
+				
+			</ul>
 
 		</div>
 
