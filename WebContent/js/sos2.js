@@ -1,19 +1,32 @@
 $(document).ready(function() {
-	
+	startCountDown();
+});
+
+var count3;
+var count2in;
+var count2out;
+var count1;
+var popSosSentin;
+var popSosSentout;
+var popSosResponse;
+
+
+
+function startCountDown(){
 	$("#count2").hide();
 	$("#count1").hide();
 	
-	setTimeout(function(){
+	count3 = setTimeout(function(){
 	$('#count3').fadeOut();
 	}, 1600);
-	setTimeout(function(){
+	count2in = setTimeout(function(){
 	$('#count2').fadeIn();
 	}, 2000);
 	
-	setTimeout(function(){
+	count2out = setTimeout(function(){
 	$('#count2').fadeOut();
 	}, 3000);
-	setTimeout(function(){
+	count1 = setTimeout(function(){
 	$('#count1').fadeIn();
 	}, 3400);
 
@@ -21,7 +34,7 @@ $(document).ready(function() {
 //	$('#count1').fadeOut();
 //	}, 4400);
 	
-	setTimeout(function(){
+	popSosSentin = setTimeout(function(){
 		$('#sosTitle').html('SOS Request is sent');
 		
 		var htmlContent = 
@@ -53,12 +66,12 @@ $(document).ready(function() {
 		$("#popSosSent").popup("open");
 	}, 4500);
 	
-	setTimeout(function(){
+	popSosSentout = setTimeout(function(){
 		$("#popSosSent").popup("close");
 		
     }, 5500);
 	
-	setTimeout(function(){
+	popSosResponse = setTimeout(function(){
 		$("#popSosResponse").popup("open");
 		var content = '<p>Juliet is calling for help from level 3.</p>\
 			</br>\
@@ -66,11 +79,26 @@ $(document).ready(function() {
 			<p>Babarella is coming.</p>';
 		$("#requestContent").html(content);
 	},8500);
-	
-});
+}
 
 
 function cancelRequest(){
+	clearTimeout(count3);
+	clearTimeout(count2in);
+	clearTimeout(count2out);
+	clearTimeout(count1);
+	clearTimeout(popSosSentin);
+	clearTimeout(popSosSentout);
+	clearTimeout(popSosResponse);
+	
+	$("#count3").hide();
+//	$("#count3").stop();
+	$("#count2").hide();
+//	$("#count2").stop();
+	$("#count1").hide();
+//	$("#count1").stop();
+	$('#sosTitle').html('SOS Request is cancel');
+	
 	$("#cancelReuqest").popup("open");
 	setTimeout(function(){
 		window.location.href = "home.html";
