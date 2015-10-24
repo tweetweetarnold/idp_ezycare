@@ -60,10 +60,13 @@
 				</div>
 			</div>
 		</div>
-
-
-		<div data-role="content">
-			<ul id="list" class="touch" data-role="listview" data-icon="false"
+                
+                
+                <div data-role="collapsible" data-inset="false"
+					data-collapsed-icon="carat-d" data-expanded-icon="carat-d"
+					data-iconpos="right">
+					<h3 id="drugName">Food</h3>
+                       <ul id="list" class="touch" data-role="listview" data-icon="false"
 				data-split-icon="minus" data-split-theme="d">
 				<li id='alle1'><a href="#demo-mail">
 						<h3 class="topic">Peanut</h3>
@@ -75,7 +78,23 @@
 						<h3 class="topic">Egg</h3>
 				</a> <a href="#" onclick='showDelete(3)' class="delete">Delete</a></li>
 			</ul>
-		</div>
+                </div>
+
+
+		    <div data-role="collapsible" data-inset="false"
+					data-collapsed-icon="carat-d" data-expanded-icon="carat-d"
+					data-iconpos="right">
+					<h3 id="drugName">Drug</h3>
+                       <ul id="list" class="touch" data-role="listview" data-icon="false"
+				data-split-icon="minus" data-split-theme="d">
+				<li id='alle1'><a href="#demo-mail">
+						<h3 class="topic">Insulin</h3>
+				</a> <a href="#" onclick='showDelete(4)' class="delete">Delete</a></li>
+				
+			</ul>
+                </div>
+                
+          
 		<div data-role="content">
 			<div id="confirm" class="ui-content" data-role="popup"
 				data-theme="none">
@@ -92,6 +111,7 @@
 				</div>
 			</div>
 		</div>
+                
 		<!-- /popup -->
 
 		<div data-role="footer" data-position="fixed">
