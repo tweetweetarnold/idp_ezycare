@@ -20,7 +20,7 @@ var nurse = {
 var residentList = [ {
 	name : "Jack",
 	bed : 101,
-	image : '//lorempixel.com/150/150/people/1/',
+	image : './img/profilePic/old1.jpg',
 	news : [ {
 		date : "11 Oct, Sun, 1700hrs",
 		icon : "./img/NewsFeedIcon.png",
@@ -87,7 +87,7 @@ var residentList = [ {
 }, {
 	name : "John",
 	bed : 102,
-	image : '//lorempixel.com/150/150/people/2/',
+	image : './img/profilePic/old2.jpg',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -118,7 +118,7 @@ var residentList = [ {
 }, {
 	name : "Charlie",
 	bed : 103,
-	image : '//lorempixel.com/150/150/people/3/',
+	image : './img/profilePic/old3.jpg',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -149,7 +149,7 @@ var residentList = [ {
 }, {
 	name : "Derrick",
 	bed : 104,
-	image : '//lorempixel.com/150/150/people/4/',
+	image : './img/profilePic/old4.jpg',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
@@ -180,7 +180,7 @@ var residentList = [ {
 }, {
 	name : "Alex",
 	bed : 105,
-	image : '//lorempixel.com/150/150/people/5/',
+	image : './img/profilePic/old5.jpg',
 	pastAppt : [ {
 		date : "11 Sep",
 		time : 1200,
