@@ -9,6 +9,15 @@ function deleteAlle(id) {
 }
 
 
+function addAllergy() {
+	var type = $( "#allerType" ).val();
+	if(type == 'food'){
+		window.location.href = "allergies2.html";
+	} else {
+		
+	}
+}
+
 //
 //$( document ).on( "pageinit", "#Allergies", function() {
 //    // Swipe to remove list item

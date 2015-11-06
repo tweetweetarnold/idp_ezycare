@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>EzyCare</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<link rel="stylesheet" href="./css/font-awesome.min.css" />
+<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="./vendor/waves/waves.min.css" />
+<link rel="stylesheet" href="./vendor/wow/animate.css" />
+<link rel="stylesheet" href="./css/nativedroid2.css" />
+<link rel="stylesheet" href="./css/listDelete.css" />
+
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+</head>
+<body>
+
+	<div data-role="page" id="Allergies">
+		
+		<div data-role="header" data-position="fixed" class="wow fadeInDown"
+			data-wow-delay="0.2s">
+			
+			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Food Allergies</h1>
+		</div>
+		<br />
+		
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s" data-display="overlay" data-position-fixed="true">
+			<div class="row between-xs">
+				<div class="col-xs-5">
+					<div class="box">
+						<ul data-role="listview" data-inset="false">
+							<li data-role="list-divider"><b>Food Allergies</b></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="box">
+						<a href="#popCreate" data-rel="popup" data-position-to="window"
+							data-transition="fade"
+							class="ui-btn ui-corner-all ui-shadow ui-btn-inline"><b>+</b></a>
+						<div data-role="popup" id="popCreate" data-overlay-theme="a">
+							<div data-role="header">
+								<h2>Add New</h2>
+							</div>
+							<form>
+								<div style="padding: 10px 20px;">
+									<input type="text" id="allergiesInput" value=""
+										placeholder="Input allergy" data-theme="a" />
+									<!--<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>-->
+									<a href="allergies2.html" data-role="button"
+										class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+	
+			<div data-role="content">
+				<ul id="list" class="touch" data-role="listview" data-icon="false"
+					data-split-icon="minus" data-split-theme="d">
+					<li id='alle1'><a href="#demo-mail">
+							<h3 class="topic">Peanut</h3>
+					</a> <a href="#" onclick='showDelete(1)' class="delete">Delete</a></li>
+					<li id='alle2'><a href="#demo-mail">
+							<h3 class="topic">Soya</h3>
+					</a> <a href="#" onclick='showDelete(2)' class="delete">Delete</a></li>
+					<li id='alle3'><a href="#demo-mail">
+							<h3 class="topic">Egg</h3>
+					</a> <a href="#" onclick='showDelete(3)' class="delete">Delete</a></li>
+				</ul>
+			</div>
+			<hr class="inset">
+			<a href="resident-summary.html" class="ui-btn ui-btn-raised ui-mini ui-btn-inline ui-btn-icon-block">Back</a>
+			<!-- popup -->
+			<div data-role="content">
+				<div id="confirm" class="ui-content" data-role="popup"
+					data-theme="none">
+					<p id="question">Are you sure you want to delete</p>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<a id="yes" onclick='deleteAlle(1)' data-role="button" data-mini="true" data-shadow="false"
+								data-theme="b" data-rel="back">Yes</a>
+						</div>
+						<div class="ui-block-b">
+							<a id="cancel" data-role="button" data-mini="true"
+								data-shadow="false" data-theme="b" data-rel="back">Cancel</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /popup -->
+	
+			<div data-role="footer" data-position="fixed">
+				<div class='row around-xs'>
+					<div class='col-xs-auto'>
+						<a href='home.html'
+							class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+							data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
+						</a>
+					</div>
+					<div class='col-xs-auto'>
+						<a href='residents.html'
+							class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
+							data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Residents</strong>
+						</a>
+					</div>
+					<div class='col-xs-auto'>
+						<a href='appointment.html'
+							class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+							data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i>
+							<strong>Appt</strong>
+						</a>
+					</div>
+					<div class='col-xs-auto'>
+						<a href='sos.html'
+							class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
+							data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+							<strong>S O S</strong>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/jquery.mobile.min.js"></script>
+	<script src="./vendor/waves/waves.min.js"></script>
+	<script src="./vendor/wow/wow.min.js"></script>
+	<script src="./js/nativedroid2.js"></script>
+	<script src="nd2settings.js"></script>
+	<script src="./js/allergies.js"></script>
+
+
+</body>
+</html>

@@ -10,8 +10,6 @@ var popSosSentin;
 var popSosSentout;
 var popSosResponse;
 
-
-
 function startCountDown(){
 	$("#count2").hide();
 	$("#count1").hide();
@@ -48,7 +46,7 @@ function startCountDown(){
 					</div>\
 			</div>';
 		$('#count1').html(htmlContent);
-		$('#cancelButtonContent').html("Press to CANCEL the request!").css({"background-color": "#FFB000"});
+		$('#cancelButtonContent').html("Press to CANCEL the request!").css({"color":"black", "background-color": "#FFB000"});
 		$('#cancelButtonContent').on("mouseenter", function() {
 			$(this).css({
 				"background-color" : "yellow",

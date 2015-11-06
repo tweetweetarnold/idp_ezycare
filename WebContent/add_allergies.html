@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="./vendor/waves/waves.min.css" />
 <link rel="stylesheet" href="./vendor/wow/animate.css" />
 <link rel="stylesheet" href="./css/nativedroid2.css" />
+<link rel="stylesheet" href="./css/listDelete.css" />
+
 
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,59 +20,48 @@
 </head>
 <body>
 
-	<div data-role="page" id="addMedication">
+	<div data-role="page" id="Allergies2">
 		
 		<div data-role="header" data-position="fixed" class="wow fadeInDown"
 			data-wow-delay="0.2s">
 			
-			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Edit Medication</h1>
+			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Add Allergies</h1>
 		</div>
-
+		
 		<div role="main" class="ui-content wow fadeIn" data-inset="false"
 			data-wow-delay="0.2s">
-                        Name : Ibuprofen
+
 			<form method="post" action="#">
 				<table id="displayTable">
-				
 					<tr>
-						<td><b>Dosage:</b></td>
-						<td><select>
-								<option value="100mg">100mg</option>
-								<option value="200mg">200mg</option>
-								<option value="300mg">300mg</option>
-                                                                <option value="400mg" selected>400mg</option>
-								<option value="500mg">500mg</option>
-						</select></td>
+						<td><b>Resident name:</b></td>
+						<td><input type="text" name="fname" id="fname"></td> 
 					</tr>
 					<tr>
-						<td><b>Frequency:</b></td>
-						<td><select>
-								<option value="Once a day">Once a day</option>
-								<option value="Twice a day" selected >Twice a day</option>
-								<option value="Thrice a day">Thrice a day</option>
-						</select></td>
+						<td><b>Bed number:</b></td>
+						<td><input type="text" name="fname" id="fname"></td> 
 					</tr>
 					<tr>
-						<td><b>Began on:</b></td>
-						<td><input type="date" value="2015-05-17" /></td>
+						<td><b>Type:</b></td>
+						<td><select id='allerType'>
+								<option value="food">Food</option>
+								<option value="med">Medicine</option>
+							</select>
+						</td>
 					</tr>
 					<tr>
-						<td><b>Side Effects:</b></td>
-						<td><textarea cols="40" rows="8" name="textarea"
-								id="textarea"></textarea></td>
+						<td><b>Allergy:</b></td>
+						<td><input type="text" name="fname" id="fname"></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td align="right"><a href="resident-medication.html"
-							class="ui-btn ui-btn-inline" data-role="button"> Cancel</a> <a
-							href="resident-medication1.html" class="ui-btn ui-btn-inline"
-							data-role="button">Save</a></td>
+						<td align="right">
+							<a href="quickButtons.html" class="ui-btn ui-btn-inline" data-role="button"> Cancel</a>
+							<a href="#" class="ui-btn ui-btn-inline" data-role="button" onclick="addAllergy();">Add</a>
+						</td>
 					</tr>
 				</table>
 			</form>
-
-
-
 		</div>
 
 		<div data-role="footer" data-position="fixed">
@@ -103,9 +94,6 @@
 				</div>
 			</div>
 		</div>
-           
-                
-                
 	</div>
 
 	<script src="./js/jquery.min.js"></script>
@@ -115,7 +103,7 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
-
+	<script src="./js/allergies.js"></script>
 
 
 </body>
