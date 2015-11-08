@@ -52,7 +52,7 @@
 									<input type="text" id="diagnosesInput" value="" placeholder="Resident name" data-theme="a" />
 									<input type="text" id="diagnosesInput" value="" placeholder="Input diagnoses" data-theme="a" />
 									<!--                                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>-->
-									<a href="addDiagnoses.html" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
+									<a onclick="endDiagnosis()" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
 								</div>
 							</form>
 						</div>
@@ -146,6 +146,27 @@
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
 	<script src="./js/diagnoses.js"></script>
+	
+	<script>
+	function getIPAddress() {
+		var ip = "";
+		$.get("http://l2.io/ip.js?var=myip", function(response) {
+			ip = response;
+		})
+		console.log(ip);
+		return ip;
+	}
+
+	function endDiagnosis() {
+		ip = getIPAddress();
+		console.log(ip);
+		$.get(
+				"InsertDataServlet?taskId=diagnosis&version=A&intent=end&ipAddress="
+						+ ip, {});
+		document.location.href = 'addDiagnoses.html';
+	}
+	
+	</script>
 
 
 </body>

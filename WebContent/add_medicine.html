@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>EzyCare</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <link rel="stylesheet" href="./css/font-awesome.min.css" />
 <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
@@ -19,59 +18,80 @@
 <body>
 
 	<div data-role="page" id="addMedication">
-		
-		<div data-role="header" data-position="fixed" class="wow fadeInDown"
-			data-wow-delay="0.2s">
-			
+
+		<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+
 			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Add Medication</h1>
 		</div>
 
-		<div role="main" class="ui-content wow fadeIn" data-inset="false"
-			data-wow-delay="0.2s">
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
 			<form method="post" action="#">
 				<table id="displayTable">
 					<tr>
-						<td><b>Resident:</b></td>
-						<td><input type="text" name="fname" id="fname"></td> 
+						<td>
+							<b>Resident:</b>
+						</td>
+						<td>
+							<input type="text" name="fname" id="fname">
+						</td>
 					</tr>
 					<tr>
-						<td><b>Medicine:</b></td>
-						<td><input type="text" name="fname" id="fname"></td> 
+						<td>
+							<b>Medicine:</b>
+						</td>
+						<td>
+							<input type="text" name="fname" id="fname">
+						</td>
 					</tr>
 					<tr>
-						<td><b>Dosage:</b></td>
-						<td><select>
+						<td>
+							<b>Dosage:</b>
+						</td>
+						<td>
+							<select>
 								<option value="100mg">100mg</option>
 								<option value="200mg">200mg</option>
 								<option value="300mg">300mg</option>
 								<option value="400mg">400mg</option>
 								<option value="500mg">500mg</option>
-						</select></td>
+							</select>
+						</td>
 					</tr>
 					<tr>
-						<td><b>Frequency:</b></td>
-						<td><select>
+						<td>
+							<b>Frequency:</b>
+						</td>
+						<td>
+							<select>
 								<option value="Once a day">Once a day</option>
 								<option value="Twice a day">Twice a day</option>
 								<option value="Thrice a day">Thrice a day</option>
-						</select></td>
+							</select>
+						</td>
 					</tr>
 					<tr>
-						<td><b>Began on:</b></td>
-						<td><input type="date" /></td>
+						<td>
+							<b>Began on:</b>
+						</td>
+						<td>
+							<input type="date" />
+						</td>
 					</tr>
 					<tr>
-						<td><b>Side Effects:</b></td>
-						<td><textarea cols="40" rows="8" name="textarea"
-								id="textarea"></textarea></td>
+						<td>
+							<b>Side Effects:</b>
+						</td>
+						<td>
+							<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+						</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td align="right"><a href="quickButtons.html"
-							class="ui-btn ui-btn-inline" data-role="button"> Cancel</a> <a
-							href="resident-medication1.html" class="ui-btn ui-btn-inline"
-							data-role="button">Add</a></td>
+						<td align="right">
+							<a href="quickButtons.html" class="ui-btn ui-btn-inline" data-role="button"> Cancel</a>
+							<a onclick="add()" class="ui-btn ui-btn-inline" data-role="button">Add</a>
+						</td>
 					</tr>
 				</table>
 			</form>
@@ -85,26 +105,36 @@
 				<div class='col-xs-auto'>
 					<a href='home.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-home zmd-2x'></i>
+						<strong>Home</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='residents.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Residents</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-accounts zmd-2x'></i>
+						<strong>Residents</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='appointment.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-calendar-check zmd-2x'></i>
 						<strong>Appt</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='sos.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-alert-octagon zmd-2x'></i>
 						<strong>S O S</strong>
 					</a>
 				</div>
@@ -119,6 +149,25 @@
 	<script src="./vendor/wow/wow.min.js"></script>
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
+
+	<script>
+		function getIPAddress() {
+			var ip = "";
+			$.get("http://l2.io/ip.js?var=myip", function(response) {
+				ip = response;
+			})
+			console.log(ip);
+			return ip;
+		}
+
+		function add() {
+			ip = getIPAddress();
+			$.get(
+					"InsertDataServlet?taskId=medicine&version=A&intent=end&ipAddress="
+							+ ip, {});
+			document.location.href = 'resident-medication1.html';
+		}
+	</script>
 
 
 

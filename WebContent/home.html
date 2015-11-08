@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>EzyCare</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <link rel="stylesheet" href="./css/font-awesome.min.css" />
 <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
@@ -22,8 +21,7 @@
 	<div data-role="page">
 
 
-		<div data-role="header" data-position="fixed" class="wow fadeInDown"
-			data-wow-delay="0.2s">
+		<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
 			<h1 class="wow fadeIn " data-wow-delay='0.4s'>Quick Buttons</h1>
 			<!--             <div data-role="navbar" style='background-color: #C1EBD5'> -->
 			<!-- 				<ul> -->
@@ -34,39 +32,35 @@
 			<!-- 			</div> -->
 		</div>
 
-		<div role="main" class="ui-content wow fadeIn" data-inset="false"
-			data-wow-delay="0.2s">
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 			<div class="row between-xs">
 				<div class="col-xs-6 quickButtonDiv">
-					<button onclick="document.location.href='add_medicine.html';"
-						style='background-color: #C1EBD5; vertical-align: middle'
-						class='quickButtons'>ADD MEDICINE</button>
+					<button onclick="addMedicine()" style='background-color: #C1EBD5;
+	vertical-align: middle' class='quickButtons'>ADD
+						MEDICINE</button>
 				</div>
 				<div class="col-xs-6 quickButtonDiv">
-					<button onclick="document.location.href='diagnoses.html';"
-						style='background-color: #C1EBD5; vertical-align: center'
-						class='quickButtons'>ADD DIAGNOSES</button>
+					<button onclick="addDiagnosis()" style='background-color: #C1EBD5;
+	vertical-align: center' class='quickButtons'>ADD
+						DIAGNOSES</button>
 				</div>
 			</div>
 			</br>
 			<div class="row between-xs quickButtonDiv">
 				<div class="col-xs-6 quickButtonDiv">
-					<button onclick="document.location.href='add_allergies.html';"
-						style='background-color: #C1EBD5' class='quickButtons'>
-						ADD ALLERGIES</button>
+					<button onclick="addAllergies()" style='background-color: #C1EBD5' class='quickButtons'>ADD ALLERGIES</button>
 				</div>
 				<div class="col-xs-6 quickButtonDiv">
-					<button onclick="document.location.href='newsFeeds.html';"
-						style='background-color: #C1EBD5' class='quickButtons'>
+					<button onclick="document.location.href='newsFeeds.html';" style='background-color: #C1EBD5' class='quickButtons'>
 						News Feeds</button>
 				</div>
 			</div>
 			</br>
 			<div class="row between-xs quickButtonDiv">
 				<div class="col-xs-6 quickButtonDiv">
-					<button onclick="document.location.href='settingspage.html';"
-						style='background-color: #C1EBD5' class='quickButtons'>
-						SETTINGS</button>
+					<button onclick="document.location.href='settingspage.html';" style='background-color: #C1EBD5'
+						class='quickButtons'
+					>SETTINGS</button>
 				</div>
 			</div>
 		</div>
@@ -77,27 +71,36 @@
 				<div class='col-xs-auto'>
 					<a href='#'
 						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-home zmd-2x'></i>
 						<strong>Home</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='residentList.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Resident</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-accounts zmd-2x'></i>
+						<strong>Resident</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='appointment.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i
-						class='zmdi zmdi-calendar-check zmd-2x'></i> <strong>Appt</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-calendar-check zmd-2x'></i>
+						<strong>Appt</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='sos.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-alert-octagon zmd-2x'></i>
 						<strong>S O S</strong>
 					</a>
 				</div>
@@ -113,6 +116,44 @@
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
 	<script src="./js/home.js"></script>
+
+	<script>
+		function getIPAddress() {
+			var ip = "";
+			$.get("http://l2.io/ip.js?var=myip", function(response) {
+				ip = response;
+			})
+			console.log(ip);
+			return ip;
+		}
+
+		function addAllergies() {
+			ip = getIPAddress();
+			console.log(ip);
+			$.get(
+					"InsertDataServlet?taskId=allergies&version=A&intent=start&ipAddress="
+							+ ip, {});
+			document.location.href = 'add_allergies.html';
+		}
+
+		function addMedicine() {
+			ip = getIPAddress();
+			console.log(ip);
+			$.get(
+					"InsertDataServlet?taskId=medicine&version=A&intent=start&ipAddress="
+							+ ip, {});
+			document.location.href = 'add_medicine.html';
+		}
+
+		function addDiagnosis() {
+			ip = getIPAddress();
+			console.log(ip);
+			$.get(
+					"InsertDataServlet?taskId=diagnosis&version=A&intent=start&ipAddress="
+							+ ip, {});
+			document.location.href = 'diagnoses.html';
+		}
+	</script>
 
 </body>
 </html>
