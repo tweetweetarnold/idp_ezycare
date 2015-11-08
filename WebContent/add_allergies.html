@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>EzyCare</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <link rel="stylesheet" href="./css/font-awesome.min.css" />
 <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
@@ -21,37 +20,50 @@
 <body>
 
 	<div data-role="page" id="Allergies2">
-		
-		<div data-role="header" data-position="fixed" class="wow fadeInDown"
-			data-wow-delay="0.2s">
-			
+
+		<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+
 			<h1 class="wow fadeIn" data-wow-delay='0.4s'>Add Allergies</h1>
 		</div>
-		
-		<div role="main" class="ui-content wow fadeIn" data-inset="false"
-			data-wow-delay="0.2s">
+
+		<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
 			<form method="post" action="#">
 				<table id="displayTable">
 					<tr>
-						<td><b>Resident name:</b></td>
-						<td><input type="text" name="fname" id="fname"></td> 
+						<td>
+							<b>Resident name:</b>
+						</td>
+						<td>
+							<input type="text" name="fname" id="fname">
+						</td>
 					</tr>
 					<tr>
-						<td><b>Bed number:</b></td>
-						<td><input type="text" name="fname" id="fname"></td> 
+						<td>
+							<b>Bed number:</b>
+						</td>
+						<td>
+							<input type="text" name="fname" id="fname">
+						</td>
 					</tr>
 					<tr>
-						<td><b>Type:</b></td>
-						<td><select id='allerType'>
+						<td>
+							<b>Type:</b>
+						</td>
+						<td>
+							<select id='allerType'>
 								<option value="food">Food</option>
 								<option value="med">Medicine</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
-						<td><b>Allergy:</b></td>
-						<td><input type="text" name="fname" id="fname"></td>
+						<td>
+							<b>Allergy:</b>
+						</td>
+						<td>
+							<input type="text" name="fname" id="fname">
+						</td>
 					</tr>
 					<tr>
 						<td></td>
@@ -69,26 +81,36 @@
 				<div class='col-xs-auto'>
 					<a href='home.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-home zmd-2x'></i> <strong>Home</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-home zmd-2x'></i>
+						<strong>Home</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='residents.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Residents</strong>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-accounts zmd-2x'></i>
+						<strong>Residents</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='appointment.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-calendar-check zmd-2x'></i>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-calendar-check zmd-2x'></i>
 						<strong>Appt</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
 					<a href='sos.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-alert-octagon zmd-2x'></i>
+						data-ajax='false'
+					>
+						<i class='zmdi zmdi-alert-octagon zmd-2x'></i>
 						<strong>S O S</strong>
 					</a>
 				</div>
@@ -104,6 +126,21 @@
 	<script src="./js/nativedroid2.js"></script>
 	<script src="nd2settings.js"></script>
 	<script src="./js/allergies.js"></script>
+
+	<script type="text/javascript" src="https://www.l2.io/ip.js?var=myip"></script>
+	<script>
+		function addAllergy() {
+			var type = $("#allerType").val();
+			if (type == 'food') {
+				$.get(
+						"InsertDataServlet?taskId=allergies&version=A&intent=end&ipAddress="
+								+ myip, {});
+				window.location.href = "allergies2.html";
+			} else {
+
+			}
+		}
+	</script>
 
 
 </body>

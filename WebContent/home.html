@@ -117,40 +117,26 @@
 	<script src="nd2settings.js"></script>
 	<script src="./js/home.js"></script>
 
+	<script type="text/javascript" src="https://www.l2.io/ip.js?var=myip"></script>
 	<script>
-		function getIPAddress() {
-			var ip = "";
-			$.get("http://l2.io/ip.js?var=myip", function(response) {
-				ip = response;
-			})
-			console.log(ip);
-			return ip;
-		}
-
 		function addAllergies() {
-			ip = getIPAddress();
-			console.log(ip);
 			$.get(
 					"InsertDataServlet?taskId=allergies&version=A&intent=start&ipAddress="
-							+ ip, {});
+							+ myip, {});
 			document.location.href = 'add_allergies.html';
 		}
 
 		function addMedicine() {
-			ip = getIPAddress();
-			console.log(ip);
 			$.get(
 					"InsertDataServlet?taskId=medicine&version=A&intent=start&ipAddress="
-							+ ip, {});
+							+ myip, {});
 			document.location.href = 'add_medicine.html';
 		}
 
 		function addDiagnosis() {
-			ip = getIPAddress();
-			console.log(ip);
 			$.get(
 					"InsertDataServlet?taskId=diagnosis&version=A&intent=start&ipAddress="
-							+ ip, {});
+							+ myip, {});
 			document.location.href = 'diagnoses.html';
 		}
 	</script>

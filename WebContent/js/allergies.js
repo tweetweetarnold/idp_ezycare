@@ -7,28 +7,18 @@ function deleteAlle(id) {
 	$(alle).hide();
 }
 
-function addAllergy() {
-	var type = $("#allerType").val();
-	if (type == 'food') {
-		ip = getIPAddress();
-		$.get(
-				"InsertDataServlet?taskId=allergies&version=A&intent=end&ipAddress="
-						+ ip, {});
-		window.location.href = "allergies2.html";
-	} else {
+//function addAllergy() {
+//	var type = $("#allerType").val();
+//	if (type == 'food') {
+//		$.get(
+//				"InsertDataServlet?taskId=allergies&version=A&intent=end&ipAddress="+ myip
+//		window.location.href = "allergies2.html";
+//	} else {
+//
+//	}
+//
+//}
 
-	}
-
-}
-
-function getIPAddress() {
-	var ip = "";
-	$.get("http://l2.io/ip.js?var=myip", function(response) {
-		ip = response;
-	})
-	console.log(ip);
-	return ip;
-}
 
 //
 // $( document ).on( "pageinit", "#Allergies", function() {

@@ -36,7 +36,7 @@ public class ClearDataServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		SessionFactory factory = new Configuration().configure("hibernate-local-create.cfg.xml")
+		SessionFactory factory = new Configuration().configure("hibernate-create.cfg.xml")
 				.buildSessionFactory();
 		Session session = factory.openSession();
 		session.beginTransaction();
