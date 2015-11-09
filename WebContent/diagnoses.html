@@ -166,7 +166,8 @@
 			$.get(
 					"InsertDataServlet?taskId=diagnosis&version=A&intent=end&ipAddress="
 							+ myip, {});
-			document.location.href = 'addDiagnoses.html';
+			alert("Add diagnosis task completed! Returning to homepage...");
+			document.location.href = 'home.html';
 		}
 	</script>
 

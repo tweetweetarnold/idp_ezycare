@@ -30,6 +30,17 @@ public class Entry {
 		this.ipAddress = ipAddress;
 	}
 
+	public Entry() {
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getTaskId() {
 		return taskId;
 	}

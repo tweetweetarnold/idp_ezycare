@@ -135,7 +135,8 @@
 				$.get(
 						"InsertDataServlet?taskId=allergies&version=A&intent=end&ipAddress="
 								+ myip, {});
-				window.location.href = "allergies2.html";
+				alert("Add allergy task completed! Returning to homepage...");
+				document.location.href = 'home.html';
 			} else {
 
 			}

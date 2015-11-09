@@ -156,7 +156,9 @@
 			$.get(
 					"InsertDataServlet?taskId=medicine&version=A&intent=end&ipAddress="
 							+ myip, {});
-			document.location.href = 'resident-medication1.html';
+			alert("Add medicine task completed! Returning to homepage...");
+			document.location.href = 'home.html';
+			
 		}
 	</script>
 
