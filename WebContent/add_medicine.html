@@ -90,7 +90,7 @@
 						<td></td>
 						<td align="right">
 							<a href="quickButtons.html" class="ui-btn ui-btn-inline" data-role="button"> Cancel</a>
-							<a onclick="add()" class="ui-btn ui-btn-inline" data-role="button">Add</a>
+							<a href="resident-medication1.html" class="ui-btn ui-btn-inline" data-role="button" onclick="add()">Add</a>
 						</td>
 					</tr>
 				</table>
@@ -156,9 +156,9 @@
 			$.get(
 					"InsertDataServlet?taskId=medicine&version=A&intent=end&ipAddress="
 							+ myip, {});
-			alert("Add medicine task completed! Returning to homepage...");
-			document.location.href = 'home.html';
-			
+			// 			alert("Add medicine task completed! Returning to homepage...");
+			// 			document.location.href = 'home.html';
+			// 			document.location.href = 'resident-medication1.html';
 		}
 	</script>
 
