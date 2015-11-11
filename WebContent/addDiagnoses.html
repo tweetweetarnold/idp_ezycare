@@ -56,27 +56,32 @@
                 
                 
                  <div data-role="content">
-                    <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="minus" data-split-theme="d">
-                        <li>
-                            <a href="#demo-mail">
-                                <h3 class="topic">High Blood Pressure</h3>
-                            </a>
-                            <a href="#" class="delete">Delete</a>
-                        </li>
-                        <li>
-                        <a href="#demo-mail">
-                            <h3 class="topic">Diabetes</h3>
-                        </a>
-                        <a href="#" class="delete">Delete</a>
-                        </li>         
-                         <li>
-                        <a href="#demo-mail">
-                            <h3 class="topic">Kidney</h3>
-                        </a>
-                        <a href="#" class="delete">Delete</a>
-                        </li>           
-                    </ul>
-                 </div>
+				<ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="minus" data-split-theme="d">
+					
+                                        <li id='diag1'>
+                                            <a href="#demo-mail">
+                                                    <h3 class="topic">High Blood Pressure</h3>
+                                            </a>
+                                            <a href="#" onclick='showDelete(1)' class="delete">Delete</a>
+					</li>
+                                        <li id='diag2'>
+						<a href="#demo-mail">
+							<h3 class="topic">Diabetes</h3>
+						</a>
+						<a href="#" onclick='showDelete(2)' class="delete">Delete</a>
+					</li>
+					<li id='diag3'>
+						<a href="#demo-mail">
+							<h3 class="topic">Kidney</h3>
+						</a>
+						<a href="#" onclick='showDelete(3)' class="delete">Delete</a>
+					</li>
+				</ul>
+			</div>
+
+<hr class="inset">
+<a href="resident-summary.html" class="ui-btn ui-btn-raised ui-mini ui-btn-inline ui-btn-icon-block">Back</a>
+
                  <div id="confirm" class="ui-content" data-role="popup" data-theme="none">
                     <p id="question">Are you sure you want to delete</p>
                     <div class="ui-grid-a">
@@ -100,7 +105,7 @@
 				<div class='col-xs-auto'>
 					<a href='residents.html'
 						class='ui-bottom-sheet-link ui-btn ui-btn-raised clr-primary ui-btn-inline waves-effect waves-button waves-effect waves-button'
-						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Residents</strong>
+						data-ajax='false'> <i class='zmdi zmdi-accounts zmd-2x'></i> <strong>Resident</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>

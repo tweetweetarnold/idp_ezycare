@@ -54,9 +54,10 @@
 							<form>
 								<div style="padding: 10px 20px;">
 									<input type="text" id="diagnosesInput" value="" placeholder="Resident name" data-theme="a" />
-									<input type="text" id="diagnosesInput" value="" placeholder="Input diagnoses" data-theme="a" />
+                                                                        <input type="text" id="diagnosesInput" value="" placeholder="Bed number" data-theme="a" />
+									<input type="text" id="diagnosesInput" value="" placeholder="Input diagnosis" data-theme="a" />
 									<!--                                <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</button>-->
-									<a onclick="endDiagnosis()" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
+									<a href="addDiagnoses.html" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Add</a>
 								</div>
 							</form>
 						</div>
@@ -125,7 +126,7 @@
 							data-ajax='false'
 						>
 							<i class='zmdi zmdi-accounts zmd-2x'></i>
-							<strong>Residents</strong>
+							<strong>Resident</strong>
 						</a>
 					</div>
 					<div class='col-xs-auto'>
@@ -161,16 +162,15 @@
 	<script src="./js/diagnoses.js"></script>
 
 	<script type="text/javascript" src="https://www.l2.io/ip.js?var=myip"></script>
-	<script>
+<!--	<script>
 		function endDiagnosis() {
 			$.get(
 					"InsertDataServlet?taskId=diagnosis&version=A&intent=end&ipAddress="
 							+ myip, {});
-// 			alert("Add diagnosis task completed! Returning to homepage...");
-// 			document.location.href = 'home.html';
+			alert("Add diagnosis task completed! Returning to homepage...");
 			document.location.href = 'addDiagnoses.html';
 		}
-	</script>
+	</script>-->
 
 
 </body>

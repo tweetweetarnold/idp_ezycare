@@ -68,8 +68,8 @@
 					<tr>
 						<td></td>
 						<td align="right">
-							<a href="quickButtons.html" class="ui-btn ui-btn-inline" data-role="button"> Cancel</a>
-							<a href="#" class="ui-btn ui-btn-inline" data-role="button" onclick="addAllergy();">Add</a>
+							<a href="home.html" class="ui-btn ui-btn-inline" data-role="button"> Cancel</a>
+							<a href="allergies2.html" class="ui-btn ui-btn-inline" data-role="button">Add</a>
 						</td>
 					</tr>
 				</table>
@@ -93,7 +93,7 @@
 						data-ajax='false'
 					>
 						<i class='zmdi zmdi-accounts zmd-2x'></i>
-						<strong>Residents</strong>
+						<strong>Resident</strong>
 					</a>
 				</div>
 				<div class='col-xs-auto'>
@@ -128,21 +128,20 @@
 	<script src="./js/allergies.js"></script>
 
 	<script type="text/javascript" src="https://www.l2.io/ip.js?var=myip"></script>
-	<script>
+<!--	<script>
 		function addAllergy() {
 			var type = $("#allerType").val();
 			if (type == 'food') {
 				$.get(
 						"InsertDataServlet?taskId=allergies&version=A&intent=end&ipAddress="
 								+ myip, {});
-// 				alert("Add allergy task completed! Returning to homepage...");
-// 				document.location.href = 'home.html';
-				document.location.href = 'allergies2.html';
+				alert("Add allergy task completed! Returning to homepage...");
+				document.location.href = 'home.html';
 			} else {
 
 			}
 		}
-	</script>
+	</script>-->
 
 
 </body>
